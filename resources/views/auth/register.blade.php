@@ -59,6 +59,16 @@
                     </div>
                     @enderror
                 </div>
+                <div class="form-floating mb-3">
+                    <label for="token">Token (Optional)</label>
+                    <input type="text" name="token" class="form-control @error('token') is-invalid @enderror"
+                        id="token" placeholder="token" value="{{ old('token') }}">
+                    @error('token')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                    @enderror
+                </div>
                 <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Register</button>
             </form>
             <div class="d-flex justify-content-center mt-2">

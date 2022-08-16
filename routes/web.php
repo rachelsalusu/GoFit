@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Admin\Dashboard\AdminDashboardController;
+use App\Http\Controllers\Admin\Dashboard\AdminTokenController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name('index');
 
 Route::name('auth.')->group(function () {
     Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
@@ -26,3 +29,19 @@ Route::name('auth.')->group(function () {
     route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
+Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('index');
+    // All routes dashboard/blogs
+});
+
+Route::prefix('/admin')->middleware(['can:admin-access'])->name('admin.')->group(function () {
+    // ADMIN TOKEN
+    Route::prefix('/dashboard')->name('dashboard.')->group(function () {
+        Route::get('/', [AdminDashboardController::class, 'index'])->name('index');
+        Route::prefix('/admintokens')->name('admintokens.')->group(function () {
+            Route::get('/', [AdminTokenController::class, 'index'])->name('index');
+            Route::post('/', [AdminTokenController::class, 'generate'])->name('generate');
+            Route::delete('/{adminToken}', [AdminTokenController::class, 'destroy'])->name('destroy');
+    });
+    });
+});

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\AdminToken;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -44,12 +45,26 @@ class AuthController extends Controller
             'password' => 'required|min:6',
             'password_confirmation' => 'required|same:password',
         ]);
-        $request->merge(['password' => bcrypt($request->password)]);
+        $isadmin = false;
+        if ($request->token !== null) {
+            $adminToken = AdminToken::where('token', $request->token)->first();
+            if ($adminToken) {
+                $isadmin = true;
+            }
+        }
+        $request->merge(['password' => bcrypt($request->password),
+                        'isadmin' => ($isadmin)
+        ]);
         User::create($request->all());
         session()->flash(
             'link',
             route('index')
         );
         return redirect()->route('auth.login')->with('success', 'User created successfully');
+    }
+    public function logout()
+    {
+        auth()->logout();
+        return redirect()->route('index');
     }
 }
