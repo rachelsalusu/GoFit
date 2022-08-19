@@ -3,9 +3,9 @@
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link {{(request()->segment(2) == '') ? 'active' : ''}}" aria-current="page"
-                    href="{{route('dashboard.index')}}">
+                    href="{{ route('merchant.dashboard.product.index') }}">
                     <span data-feather="home" class="align-text-bottom"></span>
-                    Dashboard
+                    Product
                 </a>
             </li>
         </ul>

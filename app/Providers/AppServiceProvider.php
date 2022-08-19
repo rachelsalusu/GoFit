@@ -23,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+ 
+
+        // Authorize product posts for authenticated users
+        // Gate::define('update-product', function (User $user, product $product) {
+        //     return $user->id === $product->user_id;
+        // });
     }
 }

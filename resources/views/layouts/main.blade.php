@@ -12,7 +12,7 @@
 
 
     <link rel="stylesheet" href="{{URL::asset('/css/style.css')}}">
-    <title>Blog</title>
+    <title></title>
 </head>
 
 <body>

@@ -9,11 +9,11 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                     <a class="nav-link {{(request()->is('/')) ? 'active' : ''}}" aria-current="page"
-                        href="">Home</a>
+                        href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{(request()->segment(1) == 'blogs') ? 'active' : ''}}"
-                        href="">Blogs</a>
+                        href="{{ route('merchant.index') }}">My Merchant</a>
                 </li>
 
             </ul>
@@ -22,7 +22,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        {{-- Welcome, {{ auth()->user()->name }} --}}
+                        Welcome, {{ auth()->user()->name }}
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/dashboard"><i class="bi bi-layout-text-sidebar-reverse"></i>

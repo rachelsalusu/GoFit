@@ -10,6 +10,13 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link {{(request()->segment(2) == '') ? 'active' : ''}}" aria-current="page"
+                    href="{{route('admin.dashboard.merchants.index')}}">
+                    <span data-feather="home" class="align-text-bottom"></span>
+                    Merchants
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{(request()->segment(2) == '') ? 'active' : ''}}" aria-current="page"
                     href="{{route('admin.dashboard.admintokens.index')}}">
                     <span data-feather="home" class="align-text-bottom"></span>
                     Admin Token
