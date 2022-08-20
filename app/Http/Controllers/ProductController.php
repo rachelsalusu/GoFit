@@ -81,7 +81,7 @@ class ProductController extends Controller
         if (!Gate::allows('update-product', $product)) {
             abort(403);
         }
-        return view('merchant.dashboard.product.edit');
+        return view('merchant.dashboard.product.edit', compact('product'));
     }
 
     /**
@@ -109,7 +109,7 @@ class ProductController extends Controller
         }
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 30);
         $product->update($validatedData);
-        return redirect()->route('merchant.dashboard.product.index')->with('success', 'product updated successfully');
+        return redirect()->route('merchant.dashboard.product.index')->with('success', 'Product updated successfully');
     }
 
     /**
@@ -118,8 +118,12 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        if ($product->image) {
+            Storage::delete($product->image);
+        }
+        $product->delete();
+        return redirect()->route('merchant.dashboard.product.index')->with('success', 'Product deleted successfully');
     }
 }

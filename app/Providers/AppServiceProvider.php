@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Product;
+use App\Models\User;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,11 +27,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
- 
+        Paginator::useBootstrapFive();
 
         // Authorize product posts for authenticated users
-        // Gate::define('update-product', function (User $user, product $product) {
-        //     return $user->id === $product->user_id;
-        // });
+        Gate::define('update-product', function (User $user, Product $product) {
+            return $user->id === $product->user_id;
+        });
     }
 }

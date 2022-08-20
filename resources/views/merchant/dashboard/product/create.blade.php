@@ -31,9 +31,9 @@
         @enderror
     </div>
     <div class="form-group">      
-        <label for="price">Price</label>
+        <label for="price">Price </label>
         <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" name="price"
-            placeholder="price" value="{{old('price')}}">
+            placeholder="Price (example: 55000000)" value="{{old('price')}}">
         @error('price')
         <div class="invalid-feedback">
             {{ $message }}

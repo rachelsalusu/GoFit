@@ -22,6 +22,6 @@
 
 <p class="mt-3">{!! $product->body !!}</p>
 
-<a href="/product">Back to post</a>
+<a href="/product">Back to products</a>
 
 @endsection

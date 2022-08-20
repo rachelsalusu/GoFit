@@ -44,35 +44,35 @@
                     <a href="{{route('merchant.dashboard.product.edit', compact('product'))}}"
                         class="btn btn-primary btn-sm mr-2">Edit</a>
                     <!-- Button trigger modal -->
-                    {{-- <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                    <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
                         data-bs-target="#deleteModal{{$product->id}}">
                         Delete
-                    </button> --}}
+                    </button>
                     <!-- Modal -->
-                    {{-- <div class="modal fade" id="deleteModal{{$product->id}}" tabindex="-1"
+                    <div class="modal fade" id="deleteModal{{$product->id}}" tabindex="-1"
                         aria-labelledby="deleteModal{{$product->id}}" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="deleteModalTitle{{$product->id}}">Delete Post</h5>
+                                    <h5 class="modal-title" id="deleteModalTitle{{$product->id}}">Delete product</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close">X</button>
                                 </div>
                                 <div class="modal-body">
-                                    Are You Sure want to delete post with title <strong>{{ $product->title }}</strong>
+                                    Are You Sure want to delete product with title <strong>{{ $product->title }}</strong>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">No</button>
                                     {{-- <button type="button" class="btn btn-danger">Yes</button> --}}
-                                    {{-- <form action="{{route('dashboard.products.destroy', compact('product'))}}" method="POST">
+                                    <form action="{{route('merchant.dashboard.product.destroy', compact('product'))}}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger">Delete</button>
                                     </form>
                                 </div>
                             </div>
-                        </div> --}}
-                    {{-- </div> --}} 
+                        </div>
+                    </div>
 
                 </div>
             </td>

@@ -6,6 +6,22 @@
 <form action="{{route('merchant.dashboard.product.update', $product)}}" method="POST" enctype="multipart/form-data">
     @csrf
     @method('PUT')
+    <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+
+        @if($product->image)
+        <img src="{{ asset('storage/' . $product->image) }}" class="img-preview img-fluid mb-4 col-sm-2 d-block">
+        @else
+        <img class="img-preview img-fluid mb-4 col-sm-2">
+        @endif
+        <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"
+            onchange="previewImage()">
+        @error('image')
+        <div class="invalid-feedback">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>
     <div class="form-group">
         @error('slug')
         <div class="alert alert-danger">{{ $message }}</div>
@@ -21,17 +37,11 @@
         @enderror
     </div>
 
-    <div class="mb-3">
-        <label for="image" class="form-label">Image</label>
-
-        @if($product->image)
-        <img src="{{ asset('storage/' . $product->image) }}" class="img-preview img-fluid mb-4 col-sm-2 d-block">
-        @else
-        <img class="img-preview img-fluid mb-4 col-sm-2">
-        @endif
-        <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"
-            onchange="previewImage()">
-        @error('image')
+    <div class="form-group">      
+        <label for="price">Price </label>
+        <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" name="price"
+            placeholder="Price (example: 55000000)" value="{{old('price')}}">
+        @error('price')
         <div class="invalid-feedback">
             {{ $message }}
         </div>

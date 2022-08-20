@@ -29,7 +29,9 @@
                             {{$product->user->name}}
                         </strong>
                     </a>
-
+                    <p class="card-text">
+                        Rp. {{number_format($product->price)}}
+                    </p>
                     <small class="card-text mt-3 text-muted">{{$product->created_at->diffForHumans() }}</small>
                     <p class="card-text">{{$product->excerpt}}</p>
                     <a href="{{route('product.show', $product)}}" class="card-link">Read More.</a>
@@ -39,7 +41,7 @@
         @endforeach
     </div>
     @else
-    <p class="text-center fs-4">No post found.</p>
+    <p class="text-center fs-4">No products found.</p>
     @endif
 
     <div class="mt-3">

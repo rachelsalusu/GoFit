@@ -12,7 +12,11 @@
                         href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{(request()->segment(1) == 'blogs') ? 'active' : ''}}"
+                    <a class="nav-link {{(request()->segment(1) == 'product') ? 'active' : ''}}"
+                        href="/product">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{(request()->segment(1) == 'merchant') ? 'active' : ''}}"
                         href="{{ route('merchant.index') }}">My Merchant</a>
                 </li>
 
