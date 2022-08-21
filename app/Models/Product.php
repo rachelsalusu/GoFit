@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\User;
+use App\Models\Merchant;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,6 +19,7 @@ class Product extends Model
         'price',
         'body',
         'user_id',
+        'merchant_id',
     ];
 
     public function getRouteKeyName()
@@ -28,5 +30,9 @@ class Product extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+    public function merchant()
+    {
+        return $this->belongsTo(Merchant::class);
     }
 }

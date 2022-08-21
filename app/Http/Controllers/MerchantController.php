@@ -28,9 +28,6 @@ class MerchantController extends Controller
         ]);
         $validatedData['user_id'] = auth()->id();
         
-        
-        // $merchant = Merchant::with(['user_id'])->where('user_id', auth()->id());
-        
         Merchant::create($validatedData);
         session()->flash(
             'link',

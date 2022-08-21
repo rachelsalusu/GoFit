@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\User;
+use App\Models\Merchant;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -56,7 +58,11 @@ class ProductController extends Controller
         if ($request->file('image')) {
             $validatedData['image'] = $request->file('image')->store('blog-images');
         }
+        $merchant = Merchant::where('user_id',auth()->id())->first();
+
+        $merchant_id = $merchant->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 30);
+        $validatedData['merchant_id'] = $merchant->id;
         $validatedData['user_id'] = auth()->id();
 
         $product = Product::create($validatedData);

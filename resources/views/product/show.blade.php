@@ -4,9 +4,9 @@
 <h1>{{$product->title}}</h1>
 <div>
     Dibuat oleh
-    <a href="{{route('product.index',['user'=>$product->user->username])}}">
+    <a href="{{route('product.index',['merchant'=>$product->merchant->name])}}">
         <strong class="text-capitalize text-dark">
-            <u>{{$product->user->name}}</u>
+            <u>{{$product->merchant->name}}</u>
         </strong>
     </a>
 </div>

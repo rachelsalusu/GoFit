@@ -24,9 +24,9 @@
                     </div>
                     @endif
                     <h5 class="card-title">{{$product->title}}</h5>
-                    <a class="text-dark" href="{{route('product.index',['user'=>$product->user->username])}}">
+                    <a class="text-dark" href="{{route('product.index',['merchant'=>$product->merchant->name])}}">
                         <strong class="text-capitalize">
-                            {{$product->user->name}}
+                            {{$product->merchant->name}}
                         </strong>
                     </a>
                     <p class="card-text">

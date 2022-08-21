@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Product;
+use App\Models\Merchant;
 use Illuminate\Http\Request;
 
 class IndexProductController extends Controller
@@ -11,30 +12,30 @@ class IndexProductController extends Controller
     public function index(Request $request)
     {
         $search = request('search');
-        $user = request('user');
+        $merchant = request('merchant');
 
-        $query = Product::with(['user']);
+        $query = Product::with(['merchant']);
         if ($search) {
             $query = $query->where('title', 'like', '%' . $search . '%');
         }
-        if ($user) {
-            $query = $query->whereHas('user', function ($query) use ($user) {
-                $query->where('username', '=',  $user);
+        if ($merchant) {
+            $query = $query->whereHas('merchant', function ($query) use ($merchant) {
+                $query->where('name', '=',  $merchant);
             });
         }
         $products = $query->latest()
             ->paginate(9)
             ->appends($request->query());
 
-        $users = User::has('products')->get();
+        $merchants = Merchant::has('products')->get();
 
-        return view('product.index', compact('products', 'users'));
+        return view('product.index', compact('products', 'merchants'));
     }
 
-    public function show(Product $product)
+    public function show(Product $product, Merchant $merchant)
     {
-        $product->load(['user']);
-        return view('product.show', compact('product'));
+        $product->load(['merchant']);
+        return view('product.show', compact('merchant','product'));
     }
 
 }
