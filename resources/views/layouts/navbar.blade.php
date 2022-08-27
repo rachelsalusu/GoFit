@@ -6,21 +6,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link {{(request()->is('/')) ? 'active' : ''}}" aria-current="page"
-                        href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{(request()->segment(1) == 'product') ? 'active' : ''}}"
-                        href="/product">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{(request()->segment(1) == 'merchant') ? 'active' : ''}}"
-                        href="{{ route('merchant.index') }}">My Merchant</a>
-                </li>
-
-            </ul>
+            
             <ul class='navbar-nav ml-auto'>
                 @auth
                 <li class="nav-item dropdown">
@@ -49,6 +35,38 @@
                             class="bi bi-box-arrow-in-right"></i>Login</a>
                 </li>
                 @endauth
+            </ul>
+        </div>
+    </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav col">
+                <table class="table table-bordered" >
+                    <tbody>
+                        <tr>
+                            <td class="text-center">
+                                <li class="nav-item col-12 " style="height: 30px;">
+                                    <a class="nav-link {{(request()->is('/')) ? 'active' : ''}}" aria-current="page"
+                                        href="/"><strong>Home</strong></a>
+                                </li>
+                            </td>
+                            <td class="text-center">            
+                                <li class="nav-item col-12 " style="height: 30px;">
+                                    <a class="nav-link {{(request()->segment(1) == 'product') ? 'active' : ''}}"
+                                        href="/product"><strong>Products</strong></a>
+                                </li>
+                            </td>
+                            <td class="text-center">            
+                                <li class="nav-item col-12 " style="height: 30px;">
+                                    <a class="nav-link {{(request()->segment(1) == 'merchant') ? 'active' : ''}}"
+                                        href="{{ route('merchant.index') }}"><strong>My Merchant</strong></a>
+                                </li>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </ul>
         </div>
     </div>

@@ -13,7 +13,7 @@ class MerchantsDashboardController extends Controller
         $data = Merchant::orderBy('created_at')->get();
         return view('admin.dashboard.merchants.index', compact('data'));
     }
-    public function approved($id) {
+    public function accepted($id) {
         try {
             Merchant::where('id',$id)->update([
                 'status_id' => 2
@@ -23,7 +23,18 @@ class MerchantsDashboardController extends Controller
         } catch (\exception $e) {
             \Session::flash('gagal', $e->getMessage());
         }
+        return redirect()->back();
+    }
+    public function rejected($id) {
+        try {
+            Merchant::where('id',$id)->update([
+                'status_id' => 3
+            ]);
 
+            \Session::flash('sukses','Registration has been Rejected');
+        } catch (\exception $e) {
+            \Session::flash('gagal', $e->getMessage());
+        }
         return redirect()->back();
     }
 }

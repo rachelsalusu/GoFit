@@ -17,8 +17,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('deskripsi')->nullable();
+            $table->string('image')->nullable();
             $table->foreignId('status_id')->default('1')->nullable()->references('id')->on('statuses')->cascadeonDelete();
             $table->foreignId('user_id')->references('id')->on('users')->cascadeonDelete();
+            $table->unsignedBigInteger('wallet')->default(0);
             $table->timestamps();
         });
     }

@@ -20,6 +20,11 @@
 </div>
 @endif
 
+<div>
+    Rp. {{number_format($product->price)}}
+</div>
+<a href="{{route('product.order',$product)}}">Order Now</a>
+
 <p class="mt-3">{!! $product->body !!}</p>
 
 <a href="/product">Back to products</a>

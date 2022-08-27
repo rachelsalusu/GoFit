@@ -5,10 +5,13 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MerchantController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\WalletController;
 use App\Http\Controllers\IndexProductController;
 use App\Http\Controllers\Admin\Dashboard\AdminDashboardController;
 use App\Http\Controllers\Admin\Dashboard\MerchantsDashboardController;
 use App\Http\Controllers\Admin\Dashboard\AdminTokenController;
+use App\Http\Controllers\Admin\Dashboard\TransactionDashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,6 +37,8 @@ Route::name('auth.')->group(function () {
 
 Route::prefix('/product')->name('product.')->group(function () {
     Route::get('/', [IndexProductController::class, 'index'])->name('index');
+    Route::get('/order/{product:slug}', [TransactionController::class, 'order'])->name('order');
+    Route::resource('/transaction', TransactionController::class)->except(['show']);
     Route::get('/{product:slug}', [IndexProductController::class, 'show'])->name('show');
 });
 
@@ -42,6 +47,7 @@ Route::prefix('/merchant')->middleware('auth')->name('merchant.')->group(functio
     Route::prefix('/dashboard')->name('dashboard.')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('index');
         Route::resource('/product', ProductController::class)->except(['show']);
+        Route::resource('/wallet', WalletController::class)->except(['show']);
     });
         Route::get('/register', [MerchantController::class, 'register'])->name('register');
         Route::post('/register', [MerchantController::class, 'merchantRegister'])->name('merchantRegister');
@@ -51,12 +57,17 @@ Route::prefix('/admin')->middleware(['can:admin-access'])->name('admin.')->group
     // ADMIN TOKEN
     Route::prefix('/dashboard')->name('dashboard.')->group(function () {
         Route::get('/', [AdminDashboardController::class, 'index'])->name('index');
-
         
+        Route::prefix('/transactions')->name('transactions.')->group(function () {
+            Route::get('/', [TransactionDashboardController::class, 'index'])->name('index');
+            Route::get('/accept/{id}', [TransactionDashboardController::class, 'accepted'])->name('accepted');
+            Route::get('/reject/{id}', [TransactionDashboardController::class, 'rejected'])->name('rejected');
+        });
         
         Route::prefix('/merchants')->name('merchants.')->group(function () {
             Route::get('/', [MerchantsDashboardController::class, 'index'])->name('index');
-            Route::get('/{id}', [MerchantsDashboardController::class, 'approved'])->name('approved');
+            Route::get('/accept/{id}', [MerchantsDashboardController::class, 'accepted'])->name('accepted');
+            Route::get('/reject/{id}', [MerchantsDashboardController::class, 'rejected'])->name('rejected');
         });
 
         Route::prefix('/admintokens')->name('admintokens.')->group(function () {

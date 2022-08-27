@@ -16,9 +16,17 @@
                     Wait for admin to accepted the request
                 </div>
             @elseif($data->status_id == 2)
+                <div class="col-md-6 mb-4">
+
+            
+                    <img class="rounded-circle z-depth-2 img-fluid" alt="100x100" src="{{ asset('storage/' . $data->image) }}"
+                    data-holder-rendered="true">
+        
+                </div>
                 <span class="badge badge-success">
                     {{ $data->status->name }}
                 </span>
+                
                 <div>
                     <a href="{{ route('merchant.dashboard.index') }}">Dashboard</a>
                 </div>

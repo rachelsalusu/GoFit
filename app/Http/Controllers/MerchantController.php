@@ -24,8 +24,12 @@ class MerchantController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'deskripsi' => 'string',
-            
+            'image' => 'image',
         ]);
+        if ($request->file('image')) {
+            $validatedData['image'] = $request->file('image')->store('blog-images');
+        }
+        
         $validatedData['user_id'] = auth()->id();
         
         Merchant::create($validatedData);

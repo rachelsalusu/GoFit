@@ -35,4 +35,8 @@ class Product extends Model
     {
         return $this->belongsTo(Merchant::class);
     }
+    public function transaction()
+    {
+        return $this->hasMany(Transaction::class);
+    }
 }

@@ -16,12 +16,12 @@
                     @endif
                     <h5 class="card-title">{{$product->title}}</h5>
                     <small class="card-text pb-2">Dibuat oleh
-                        <a href="{{route('product.index',['user'=>$product->user->username])}}">
-                            <strong class="text-capitalize text-dark">
-                                <u>{{$product->user->name}}</u>
+                        <a class="text-dark" href="{{route('product.index',['merchant'=>$product->merchant->name])}}">
+                            <strong class="text-capitalize">
+                                {{$product->merchant->name}}
                             </strong>
+                        </a>
                     </small>
-                    </a>
                     <p class="card-text">
                         Rp. {{number_format($product->price)}}
                     </p>
