@@ -49,7 +49,7 @@
                             <td class="text-center">
                                 <li class="nav-item col-12 " style="height: 30px;">
                                     <a class="nav-link {{(request()->is('/')) ? 'active' : ''}}" aria-current="page"
-                                        href="/"><strong>Home</strong></a>
+                                        href="{{ route('account.index') }}"><strong>Account</strong></a>
                                 </li>
                             </td>
                             <td class="text-center">            

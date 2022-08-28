@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Merchant;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Gate;
+
 
 class MerchantController extends Controller
 {
@@ -21,6 +24,7 @@ class MerchantController extends Controller
 
     public function merchantRegister(Request $request)
     {
+        
         $validatedData = $request->validate([
             'name' => 'required',
             'deskripsi' => 'string',
@@ -39,4 +43,6 @@ class MerchantController extends Controller
         );
         return redirect()->route('merchant.index')->with('success', 'merchant created successfully');
     }
+
+    
 }

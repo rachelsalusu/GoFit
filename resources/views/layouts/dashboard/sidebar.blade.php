@@ -3,7 +3,7 @@
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link {{(request()->segment(2) == '') ? 'active' : ''}}" aria-current="page"
-                    href="">
+                    href="{{ route('merchant.dashboard.profile') }}">
                     <span data-feather="home" class="align-text-bottom"></span>
                     Merchant Profile
                 </a>

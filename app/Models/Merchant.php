@@ -16,6 +16,7 @@ class Merchant extends Model
         'user_id',
         'deskripsi',
         'status',
+        'image',
     ];
 
     

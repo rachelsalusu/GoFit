@@ -8,6 +8,8 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WalletController;
 use App\Http\Controllers\IndexProductController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserProfileController;
 use App\Http\Controllers\Admin\Dashboard\AdminDashboardController;
 use App\Http\Controllers\Admin\Dashboard\MerchantsDashboardController;
 use App\Http\Controllers\Admin\Dashboard\AdminTokenController;
@@ -35,6 +37,9 @@ Route::name('auth.')->group(function () {
     route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
+Route::prefix('/account')->middleware('auth')->name('account.')->group(function () {
+    Route::get('/', [UserProfileController::class, 'index'])->name('index');
+});
 Route::prefix('/product')->name('product.')->group(function () {
     Route::get('/', [IndexProductController::class, 'index'])->name('index');
     Route::get('/order/{product:slug}', [TransactionController::class, 'order'])->name('order');
@@ -48,6 +53,9 @@ Route::prefix('/merchant')->middleware('auth')->name('merchant.')->group(functio
         Route::get('/', [DashboardController::class, 'index'])->name('index');
         Route::resource('/product', ProductController::class)->except(['show']);
         Route::resource('/wallet', WalletController::class)->except(['show']);
+        // Route::resource('/profile', ProfileController::class)->except(['show']);
+        Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+        Route::post('/profile', [ProfileController::class, 'update'])->name('update');
     });
         Route::get('/register', [MerchantController::class, 'register'])->name('register');
         Route::post('/register', [MerchantController::class, 'merchantRegister'])->name('merchantRegister');
