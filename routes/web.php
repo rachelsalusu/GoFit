@@ -39,6 +39,7 @@ Route::name('auth.')->group(function () {
 
 Route::prefix('/account')->middleware('auth')->name('account.')->group(function () {
     Route::get('/', [UserProfileController::class, 'index'])->name('index');
+    Route::post('/update', [UserProfileController::class, 'update'])->name('update');
 });
 Route::prefix('/product')->name('product.')->group(function () {
     Route::get('/', [IndexProductController::class, 'index'])->name('index');
