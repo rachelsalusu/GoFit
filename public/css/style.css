@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* auth */
+.btn-submit {
+
+    background: #FBE555;
+    border-radius: 15px;
+    
+    
+}
+.font-submit {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FDFDFD;
+}
+
+.form-size {
+    
+    width: 100%;
+    height: 53.04px;
+    left: 1372.49px;
+    top: 393px;
+    
+}
+
+.font-auth {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 1px;
+}
