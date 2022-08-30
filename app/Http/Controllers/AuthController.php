@@ -25,7 +25,7 @@ class AuthController extends Controller
         ]);
 
         if (auth()->attempt(['email' => $request->email, 'password' => $request->password])) {
-            return redirect(session('link'));
+            return redirect()->route('product.index');
         }
         session()->flash('link', session('link'));
         return redirect()->back()->with('error', 'Email or password is incorrect');

@@ -24,7 +24,7 @@ class IndexProductController extends Controller
             });
         }
         $products = $query->latest()
-            ->paginate(9)
+            ->paginate(6)
             ->appends($request->query());
 
         $merchants = Merchant::has('products')->get();

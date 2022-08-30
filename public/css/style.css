@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('/font/over-there.ttf');
+
+@font-face {
+    font-family: 'over_thereregular';
+    src: url('/font/over_there-webfont.woff2') format('woff2'),
+         url('/font/over_there-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 /* auth */
 .btn-submit {
@@ -33,4 +44,145 @@
     font-weight: 400;
     font-size: 18px;
     margin-bottom: 1px;
+}
+
+/* home */
+
+/* navbar */
+.navbar{
+    height: 80px;
+    background-color: #FBE555;
+}
+
+.navlogin {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #E5D045;
+    border-color: white;
+}
+.font-navlogin {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+
+    color: white;
+}
+
+/* Hero Post */
+.container-img{
+    position: relative;
+}
+.overthere {
+    position: absolute;
+    font-family: 'over_thereregular';
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 43px;
+    line-height: 130px;
+
+    color: #FAF6F6;
+}
+.font-hero {
+    position: absolute;
+    top: 36%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 31px;
+    line-height: 69px;
+
+    color: #FAF6F6;
+}
+.searchbar {
+    position: absolute;
+    top: 60%;
+    width: 50%;
+    left: 300.46px;
+
+    border-radius: 100px;
+}
+
+.searchicon {
+    position: absolute;
+    top: 0px;
+    left: -35px;
+    width: 36px;
+    height: 37px;
+
+    color: white;
+}
+
+/* home body */
+.img-border{
+    border-radius: 20px 20px 0px 30px;
+}
+.card-size {
+    width: 330px;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.card-body {
+    width: auto;
+    padding: 0px;
+}
+
+.card-title{
+    margin-left: 20px;
+}
+.card-text {
+    margin-left: 20px;
+}
+.card-link {
+    margin-left: 20px;
+}
+.card-merchant {
+    margin-left: 20px;
+}
+
+.font-titlecard {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #202020;
+}
+.font-merchantcard {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 27px;
+    color: #202020;
+}
+
+.font-pricecard {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #2B1360;
+}
+
+.font-excerptcard {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.011em;
+    color: #727171;
 }

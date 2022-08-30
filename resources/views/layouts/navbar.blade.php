@@ -1,6 +1,8 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container">
-        <a class="navbar-brand" href="/product">Mobil Bekas</a>
+        <a class="navbar-brand mt-4" href="/product">
+            <img src="{{ asset("image/logo-putih.png") }}" style="width: 100px;" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -10,9 +12,11 @@
             <ul class='navbar-nav ml-auto'>
                 @auth
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link " href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Welcome, {{ auth()->user()->username }}
+                        <button class="navlogin font-navlogin">
+                            Welcome, <strong>{{ auth()->user()->username }}</strong>
+                        </button>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         </li>

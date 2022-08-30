@@ -27,7 +27,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/', function(){
+    return redirect()->route('product.index');
+})->name('index');
 
 Route::name('auth.')->group(function () {
     Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
