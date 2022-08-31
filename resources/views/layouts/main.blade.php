@@ -27,7 +27,7 @@
     </div>
 
     {{-- FOOTER --}}
-
+    @include('layouts.footer')
 
 
     <!-- Optional JavaScript -->

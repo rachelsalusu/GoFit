@@ -9,7 +9,31 @@
     font-style: normal;
 
 }
+/* footer */
+.footer-logo {
+    width: 23px; 
+    height:21px;
+    margin-right: 20px;
+}
 
+.fontftrtitle {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 21px;
+    line-height: 44px;
+
+    color: #202020;
+}
+.fontftr{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    
+
+    color: #202020;
+    }
 
 /* auth */
 .btn-submit {
