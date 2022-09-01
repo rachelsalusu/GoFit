@@ -9,6 +9,7 @@
     font-style: normal;
 
 }
+
 /* footer */
 .footer-logo {
     width: 23px; 
@@ -70,7 +71,7 @@
     margin-bottom: 1px;
 }
 
-/* home */
+/* HOME */
 
 /* navbar */
 .navbar{
@@ -149,6 +150,13 @@
 .img-border{
     border-radius: 20px 20px 0px 30px;
 }
+.logo-merchant {
+    width: 10%;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-right: -20px;
+}
 .card-size {
     width: 330px;
     height: 100%;
@@ -188,6 +196,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
+    margin-left: 1px;
     line-height: 27px;
     color: #202020;
 }
@@ -209,4 +218,107 @@
     line-height: 24px;
     letter-spacing: -0.011em;
     color: #727171;
+}
+
+/* SHOW PRODUCT */
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.flex-left {
+    flex: 80%;
+}
+
+.flex-right {
+    flex: 20%;
+    margin-left: 30px;
+}
+@media (max-width: 700px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+  }
+.img-product {
+    border-radius: 15px;
+    width: 1000px;
+    margin-bottom: 20px;
+}
+
+.btn-merchant{
+    border-radius: 10px;
+    width: 100%;
+    height: 60px;
+    text-decoration: none;
+    border-style: ridge;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #F0F0F0;
+}
+.font-merchantshow {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 44px;
+    text-decoration: none;
+    margin-left: 80px;
+    margin-top: -45px;
+
+    color: #202020;
+}
+.merchantlogo {
+    width: 44px;
+    height: 47px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.font-titleshow {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #202020;
+}
+.font-bodyshow {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    word-wrap: break-word;
+    line-height: 44px;
+    text-align: left;
+    color: #000000;
+}
+.font-priceshow {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #202020;
+}
+.btn-order {
+    width: 300px;
+    border-radius: 10px;
+    border: transparent;
+    font-weight: bold;
+    background-color: #2B1360;
+    color: #FDFDFD;
+}
+.font-order {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+/* ORDER PAGE */
+.font-ordertitle {
+    font-family: 'Poppins';
+    font-style: normal;
 }

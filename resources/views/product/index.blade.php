@@ -30,6 +30,7 @@
                     </div>
                     @endif
                     <h5 class="card-title font-titlecard mt-2">{{$product->title}}</h5>
+                    <img class="logo-merchant" src="{{ asset('storage/' . $product->merchant->image) }}" alt="">
                     <a class="text-dark font-merchantcard " href="{{route('product.index',['merchant'=>$product->merchant->name])}}">
                         <strong class="text-capitalize card-merchant">
                             {{$product->merchant->name}}

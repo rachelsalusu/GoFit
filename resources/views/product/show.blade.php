@@ -1,32 +1,44 @@
 @extends('layouts.main')
 
 @section('content')
-<h1>{{$product->title}}</h1>
-<div>
-    Dibuat oleh
-    <a href="{{route('product.index',['merchant'=>$product->merchant->name])}}">
-        <strong class="text-capitalize text-dark">
-            <u>{{$product->merchant->name}}</u>
-        </strong>
-    </a>
-</div>
-<div>
-    Dibuat pada <strong>{{$product->created_at->format('d M Y')}}</strong>
-</div>
+<div class="flex-container">
+    <div class="flex-left" style="max-width: 500px">
+        <div>
+            @if ($product->image)
+            <div>
+                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->title }}" class="img-fluid img-product">
+            </div>
+            @endif
+            <div class="btn-merchant">
+                <a href="{{route('product.index',['merchant'=>$product->merchant->name])}}" style="">
+                    <img src="{{ asset("image/circleuser.png") }}" class="merchantlogo" alt="">
+                    <p class="text-capitalize font-merchantshow">
+                       <u>{{$product->merchant->name}}</u>
+                    </p>
+                </a>
+            </div>
+            <h4 class="font-titleshow">Product Detail</h4>
+            <div class="font-bodyshow">{!! $product->body !!}</div>
+            <a href="/product">Back to products</a>
+        </div>
+    </div>
+    <div class="flex-right">
+ 
+        <h1 class="font-titleshow">{{$product->title}}</h1>
+        <div class="font-priceshow">
+            Rp. {{number_format($product->price)}}
+        </div>
+        
+        <a class="font-order" href="{{route('product.order',$product)}}">
+            <button class="btn-order">Order Now</button>
+        </a>
+        
+        <div class="font-bodyshow" style="margin-bottom: -10px">Created at:</div>
+        <div>
+            {{$product->created_at->format('d M Y')}}
+        </div>
+    </div>
 
-@if ($product->image)
-<div style="width: 300px">
-    <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->title }}" class="img-fluid">
 </div>
-@endif
-
-<div>
-    Rp. {{number_format($product->price)}}
-</div>
-<a href="{{route('product.order',$product)}}">Order Now</a>
-
-<p class="mt-3">{!! $product->body !!}</p>
-
-<a href="/product">Back to products</a>
 
 @endsection

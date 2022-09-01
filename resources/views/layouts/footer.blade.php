@@ -20,10 +20,10 @@
               Navigate
             </h6>
             <p class="mb-1">
-              <a href="#!" class="text-reset fontftr">Account</a>
+              <a href="{{ route('account.index') }}" class="text-reset fontftr">Account</a>
             </p>
             <p class="mb-1">
-              <a href="#!" class="text-reset fontftr">My Merchant</a>
+              <a href="{{ route('merchant.index') }}" class="text-reset fontftr">My Merchant</a>
             </p>
             <p class="mb-1">
               <a href="#!" class="text-reset fontftr">Orders</a>
@@ -56,11 +56,7 @@
             <img src="{{ asset("image/appstorefooter.png") }}" class="footer-logo mb-3" alt="">
             <p></p>
           </div>
-          <!-- Grid column -->
         </div>
-        <!-- Grid row -->
       </div>
     </section>
-    <!-- Section: Links  -->
   </footer>
-  <!-- Footer -->
