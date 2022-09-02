@@ -39,33 +39,3 @@
         </div>
     </div>
 </nav>
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div id="navbarbtn">
-                <a class=""  href="{{ route('account.index') }}">
-                    <button class="btnnavbar {{(request()->segment(1) == 'account') ? 'active' : ''}}">Account</button>
-                </a>
-                <a class=""  href="{{ route('merchant.index') }}">
-                    <button class="btnnavbar {{(request()->segment(1) == 'merchant') ? 'active' : ''}}">My Merchant</button>
-                </a>
-                <a class=""  href="">
-                    <button class="btnnavbar {{(request()->segment(1) == 'orders') ? 'active' : ''}}">Orders</button>
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<script>
-    // Add active class to the current button (highlight it)
-    var header = document.getElementById("navbarbtn");
-    var btns = header.getElementsByClassName("btnnavbar");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function() {
-      var current = document.getElementsByClassName("active");
-      current[0].className = current[0].className.replace(" active", "");
-      this.className += " active";
-      });
-    }
-</script>

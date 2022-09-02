@@ -6,7 +6,7 @@
 </div>
 <div class="d-flex justify-content-center">
     <div>
-        <img src="{{ asset("image/register.png") }}" style="width: 100%; height: 100%; " alt="">
+        <img src="{{ asset("image/register.png") }}" style="object-fit: contain;width: 100%; height: 100%; " alt="">
     </div> 
     <div class="col-lg-5">
 

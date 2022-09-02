@@ -1,7 +1,7 @@
-@extends('layouts.main')
+@extends('layouts.product.main')
 
 @section('content')
-<div class="flex-container">
+<div class="flex-container mt-5">
     <div class="flex-left" style="max-width: 500px">
         <div>
             @if ($product->image)
@@ -11,7 +11,7 @@
             @endif
             <div class="btn-merchant">
                 <a href="{{route('product.index',['merchant'=>$product->merchant->name])}}" style="">
-                    <img src="{{ asset("image/circleuser.png") }}" class="merchantlogo" alt="">
+                    <img class="logo-merchantshow" src="{{ asset('storage/' . $product->merchant->image) }}" alt="">
                     <p class="text-capitalize font-merchantshow">
                        <u>{{$product->merchant->name}}</u>
                     </p>

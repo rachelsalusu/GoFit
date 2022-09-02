@@ -146,6 +146,27 @@
     color: white;
 }
 
+/* navbar home */
+/* Style the buttons */
+.btnnavbar {
+    border: transparent;
+    width: 370px;
+    padding: 10px;
+    float: left;
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    font-family: "poppins";
+    font-size: 18px;
+  }
+  
+  /* Style the active class, and buttons on mouse-over */
+  .active, .btnnavbar:hover {
+    background-color: #2B1360;
+    color: white;
+  }
+
 /* home body */
 .img-border{
     border-radius: 20px 20px 0px 30px;
@@ -225,7 +246,7 @@
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-    
+    margin-bottom: 300px;
 }
 .flex-left {
     flex: 80%;
@@ -267,11 +288,13 @@
 
     color: #202020;
 }
-.merchantlogo {
-    width: 44px;
-    height: 47px;
-    margin-left: 20px;
+.logo-merchantshow {
+    width: 10%;
+    height: 45px;
+    border-radius: 50%;
     margin-top: 5px;
+    margin-left: 15px;
+    margin-right: -20px;
 }
 
 .font-titleshow {
@@ -321,4 +344,36 @@
 .font-ordertitle {
     font-family: 'Poppins';
     font-style: normal;
+}
+
+/* MERCHANT PAGE */
+/* .flex-leftmerchant {
+    flex: 80%;
+}
+
+.flex-rightmerchant {
+    flex: 20%;
+    margin-left: 30px;
+} */
+
+.merchant-status-img {
+    object-fit: contain;
+    width: 500px;
+}
+.font-merchantstatus {
+    display: flex;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+
+    color: #202020;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.merc-regis {
+    font-weight: bold;
+    color: #FF9305;
 }
