@@ -23,7 +23,7 @@ class ProductController extends Controller
         $products = Product::with(['user'])->where('title', 'like', '%' . request('search') . '%')
             ->where('user_id', auth()->id())
             ->latest()
-            ->paginate(3)
+            ->paginate(100)
             // ->withQueryString();
             ->appends($request->query());
         return view('merchant.dashboard.product.index', compact('products'));

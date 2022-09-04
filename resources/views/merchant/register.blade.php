@@ -2,12 +2,15 @@
 
 @section('content')
 <div class="row justify-content-center">
-    <div class="col-lg-5">
-            <h1 class="h3 mb-3 fw- text-center">Register</h1>
+    <div class="col-6">
+        <img class="merchant-status-img " src="{{ asset("image/merchantregist.png") }}" alt="">
+    </div>
+    <div class="col-6">
+            <h1 class="mb-3 font-titleregis">Register</h1>
             <form action="{{route('merchant.merchantRegister')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
-                    <label for="image" class="form-label">Profile Image</label>
+                    <label for="image" class="form-label font-sub-titleregis">Profile Image</label>
                     <img class="img-preview img-fluid mb-4 col-sm-2">
                     <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"
                         onchange="previewImage()">
@@ -17,7 +20,7 @@
                     </div>
                     @enderror
                 </div>
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3 font-sub-titleregis">
                     <label for="name">Name</label>
                     <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror"
                         id="name" placeholder="Name" required value="{{ old('name') }}">
@@ -27,7 +30,7 @@
                     </div>
                     @enderror
                 </div>
-                <div class="form-floating mb-3">
+                <div class="form-floating mb-3 font-sub-titleregis">
                     <label for="deskripsi">deskripsi</label>
                     <input type="text" name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror"
                         id="deskripsi" placeholder="deskripsi" required value="{{ old('deskripsi') }}">
@@ -38,7 +41,7 @@
                     @enderror
                 </div>
                 
-                <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Register</button>
+                <button class="w-100 btn btn-order mt-3 mb-3" type="submit">Register</button>
             </form>
     </div>
 </div>

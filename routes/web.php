@@ -10,6 +10,7 @@ use App\Http\Controllers\WalletController;
 use App\Http\Controllers\IndexProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserProfileController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Admin\Dashboard\AdminDashboardController;
 use App\Http\Controllers\Admin\Dashboard\MerchantsDashboardController;
 use App\Http\Controllers\Admin\Dashboard\AdminTokenController;
@@ -63,7 +64,9 @@ Route::prefix('/merchant')->middleware('auth')->name('merchant.')->group(functio
         Route::get('/register', [MerchantController::class, 'register'])->name('register');
         Route::post('/register', [MerchantController::class, 'merchantRegister'])->name('merchantRegister');
 });
-
+Route::prefix('/orders')->middleware('auth')->name('orders.')->group(function () {
+    Route::get('/', [OrderController::class, 'index'])->name('index');
+});
 Route::prefix('/admin')->middleware(['can:admin-access'])->name('admin.')->group(function () {
     // ADMIN TOKEN
     Route::prefix('/dashboard')->name('dashboard.')->group(function () {

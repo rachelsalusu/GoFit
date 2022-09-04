@@ -347,18 +347,10 @@
 }
 
 /* MERCHANT PAGE */
-/* .flex-leftmerchant {
-    flex: 80%;
-}
-
-.flex-rightmerchant {
-    flex: 20%;
-    margin-left: 30px;
-} */
 
 .merchant-status-img {
     object-fit: contain;
-    width: 500px;
+    width: 600px;
 }
 .font-merchantstatus {
     display: flex;
@@ -377,3 +369,100 @@
     font-weight: bold;
     color: #FF9305;
 }
+.font-titleregis {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 69px;
+    text-align: center;
+
+    color: #202020;
+}
+.font-sub-titleregis {
+    font-family: 'Poppins';
+}
+.active, .btn-order:hover {
+    background-color: #2B1360;
+    color: white;
+}
+.merc-status {
+    display: flex;
+    justify-content: space-between;
+}
+.merc-statusdesc {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.05em;
+
+    color: #B7B2B2;
+}
+.badge-mercstatus{
+    width: 176.38px;
+    height: 35.14px;
+    text-align: center;
+    background: #FBE555;
+    color: white;
+    border-radius: 15px;
+}
+.text-mercstatus {
+    margin-top: 7px;
+}
+
+/* ORDERS PAGE */
+.title-order {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+
+    color: #202020;
+}
+.font-orders{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+
+    color: #202020;
+}
+.status-order1 {
+    width: 130px;
+    height: 85%;
+    justify-content: center;
+    background: #FBE555;
+    color: white;
+    border-radius: 15px;
+}
+.status-order2 {
+    width: 130px;
+    height: 85%;
+    justify-content: center;
+    background: #2A1A5E;
+    color: white;
+    border-radius: 15px;
+}
+.status-order3 {
+    width: 130px;
+    height: 85%;
+    justify-content: center;
+    background: #F45905;
+    color: white;
+    border-radius: 15px;
+}
+/* Merchant Dashboard */
+
+/* Product Page */
+
+.box-product {
+    border:  10px solid black;
+    
+}
+
+/* Wallet */
+
+.wallet-box {
+    border: 2px solid black;
+}
+

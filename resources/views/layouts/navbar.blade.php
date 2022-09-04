@@ -49,7 +49,7 @@
                 <a class=""  href="{{ route('merchant.index') }}">
                     <button class="btnnavbar {{(request()->segment(1) == 'merchant') ? 'active' : ''}}">My Merchant</button>
                 </a>
-                <a class=""  href="">
+                <a class=""  href="{{ route('orders.index') }}">
                     <button class="btnnavbar {{(request()->segment(1) == 'orders') ? 'active' : ''}}">Orders</button>
                 </a>
             </div>

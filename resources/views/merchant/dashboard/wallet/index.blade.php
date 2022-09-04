@@ -1,11 +1,20 @@
 @extends('layouts.dashboard.main')
 
 @section('content')
-<a href="{{route('merchant.dashboard.wallet.create')}}">
-    <button type="submit" class="btn btn-primary">Create</button>
-</a>
-
-    Rp. {{number_format($merchant->wallet)}}
+<h3>Wallet</h3>
+<div>
+    <div class="row wallet-box">
+        <div class="col-6">
+            <div>Balance</div>
+            Rp. {{number_format($merchant->wallet)}}
+        </div>
+        <div class="col-6">
+            <a href="{{route('merchant.dashboard.wallet.create')}}">
+                <button type="submit" class="btn btn-primary">Withdraw</button>
+            </a>        
+        </div>
+    </div>    
+</div>
 
 <table>
     <thead>

@@ -8,21 +8,24 @@
             @if(auth()->user()->merchant)
             
                 @if($data->status_id == 1)
-                <div class="row" style="max-width: 500px">
-                    <div class="col">
-                            <img src="{{ asset("image/merchantwait.png") }}" alt="">
-                    
-                        <div>
-                            Merchant Status :
-                            <span class="badge badge-warning">
-                                {{ $data->status->name }}
-                            </span>
-                        </div>
-                            <div>
-                                Wait for admin to accepted the request
-                            </div>
+                <div class="row" style="">
+                    <div class="col-6" style="max-width: 500px">
+                        <img class="merchant-status-img " src="{{ asset("image/merchantwait.png") }}" alt="">
                     </div>
-                    
+                    <div class="col-6 ml-5 font-merchantstatus">
+                        <div>
+                            <h3 class="mb-4">Merchant Status</h3>
+                            <div class="merc-status">
+                                <p style="margin-top: 11px">Status : </p> 
+                                <span class="badge badge-mercstatus">
+                                    <p class="text-mercstatus">{{ $data->status->name }}</p>
+                                </span>
+                            </div>
+                            <div class="merc-statusdesc">
+                                 Wait for admin to accepted the request
+                            </div>    
+                        </div>
+                    </div>
                 </div>
                 @elseif($data->status_id == 2)
                 
