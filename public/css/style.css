@@ -453,12 +453,99 @@
 }
 /* Merchant Dashboard */
 
+/* Sidebar */
+.btnsidebar-merchant {
+    border: transparent;
+    border-radius: 20px;
+    width: 300px;
+    padding: 10px;
+    float: left;
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    font-family: "poppins";
+    font-size: 18px;
+} 
+/* Style the active class, and buttons on mouse-over */
+.active, .btnsidebar-merchant:hover {
+    background-color: #2B1360;
+    color: white;
+    }
+
 /* Product Page */
 
-.box-product {
-    border:  10px solid black;
-    
+.border-product {
+    border: 2px solid #B7B2B2;
+    border-radius: 20px 20px 20px 20px;
+    margin-left: 50px;
+    width: 800px;
+    height: 170px;
+    right: 200px;
 }
+.product-img {
+    justify-items: center;
+    margin-left: 10px;
+    margin-top: 12px;
+    border-radius: 30px 30px 30px 30px;
+    object-fit: cover;
+    width: 250px;
+    height: 140px;
+}
+.font-titleproduct {
+    margin-top: 12px;
+    margin-bottom: 1px;
+    margin-left: 10px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 30px;
+
+    color: #202020;
+}
+.font-priceproduct {
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 1px;
+    margin-bottom: 7px;
+    margin-left: 10px;
+    color: #202020;
+}
+.hr-product {
+    margin-top: 21px;
+    border-bottom: 2px solid #B7B2B2;
+    width: 500px;
+}
+.btn-createproduct {
+    margin-top: 20px;
+    width: 210px;
+    color: white;
+    background: #2B1360;
+    border-radius: 15px;
+}
+.btn-updateproduct {
+    width: 240px;
+    margin-right: 15px;
+    color: white;
+    background: #2B1360;
+    border-radius: 15px;
+}
+.btn-deleteproduct {
+    width: 240px;
+    color: white;
+    background: #FBE555;
+    border-radius: 15px;
+}
+.active, .btn-updateproduct:hover {
+    background-color: #3b2b5c;
+    color: black;
+}
+
 
 /* Wallet */
 

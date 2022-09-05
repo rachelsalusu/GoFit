@@ -130,12 +130,12 @@
         }
 
         /* Navbar */
-        .navbar-brand {
+        /* .navbar-brand {
             padding-top: .75rem;
             padding-bottom: .75rem;
             background-color: rgba(0, 0, 0, .25);
             box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
-        }
+        } */
 
         .navbar .navbar-toggler {
             top: .25rem;
@@ -157,6 +157,7 @@
             box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
         }
     </style>
+    <link rel="stylesheet" href="{{URL::asset('/css/style.css')}}">
 
     {{-- TRIX EDITOR --}}
     <link rel="stylesheet" href="{{URL::asset('css/trix.css')}}">
@@ -177,9 +178,12 @@
     <div class="container-fluid">
         <div class="row">
 
-            @include('layouts.dashboard.sidebar')
+            <div class="col-3"
+                @include('layouts.dashboard.sidebar')
+            </div>
+            
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main class="col-md-9 ms-sm-auto px-md-4">
                 @yield('content')
             </main>
 

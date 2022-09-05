@@ -157,6 +157,7 @@
             box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
         }
     </style>
+    <link rel="stylesheet" href="{{URL::asset('/css/style.css')}}">
 
     {{-- TRIX EDITOR --}}
     <link rel="stylesheet" href="{{URL::asset('css/trix.css')}}">
