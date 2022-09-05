@@ -546,7 +546,76 @@
     color: black;
 }
 
+/* Transaction */
+.font-transactionpage {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 46px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    line-height: 55px;
 
+    color: #202020;
+}
+.hr-transaction {
+    margin-top: 21px;
+    margin-left: 1px;
+    border-bottom: 2px solid #B7B2B2;
+    width: 850px;
+}
+.font-transactionname {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+
+    color: #202020;
+
+}
+.font-transactionbody {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+
+    color: #202020;
+}
+.font-transactionprice {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+
+    color: #202020;
+}
+.status-transaction1 {
+    color: white;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    background: #FBE555;
+    border-radius: 15px;
+}
+.status-transaction2 {
+    color: white;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    background: #2A1A5E;
+    border-radius: 15px;
+}
+.status-transaction3 {
+    color: white;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    background: #F45905;
+    border-radius: 15px;
+}
 /* Wallet */
 
 .wallet-box {
