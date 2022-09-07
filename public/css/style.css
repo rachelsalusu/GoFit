@@ -462,11 +462,13 @@
     float: left;
     background-color: white;
     color: black;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     font-family: "poppins";
     font-size: 18px;
 } 
+.sidebar-merchant {
+    background-color: #FCFCFC;
+}
 /* Style the active class, and buttons on mouse-over */
 .active, .btnsidebar-merchant:hover {
     background-color: #2B1360;

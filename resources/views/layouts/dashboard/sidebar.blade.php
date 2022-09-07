@@ -1,5 +1,5 @@
-<nav id="sidebarMenu" class="col-md-5 col-lg-2 d-md-block bg-white sidebar collapse">
-    <div class="position-sticky pt-3">
+<nav id="sidebarMenu" class="col-md-5 col-lg-2 d-md-block  sidebar collapse">
+    <div class="position-sticky pt-3 sidebar-merchant" style="height: 100%; width: 100%">
         <ul class="nav flex-column">
             <li class="nav-item mb-3">
                 <a class="" aria-current="page"

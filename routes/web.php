@@ -55,7 +55,7 @@ Route::prefix('/product')->name('product.')->group(function () {
 Route::prefix('/merchant')->middleware('auth')->name('merchant.')->group(function () {
     Route::get('/', [MerchantController::class, 'index'])->name('index');
     Route::prefix('/dashboard')->name('dashboard.')->group(function () {
-        Route::get('/', [DashboardController::class, 'index'])->name('index');
+        Route::get('/', [ProductController::class, 'index'])->name('index');
         Route::resource('/product', ProductController::class)->except(['show']);
         Route::resource('/wallet', WalletController::class)->except(['show']);
         Route::get('/transaction', [DashboardTransactionController::class, 'index'])->name('transaction');
