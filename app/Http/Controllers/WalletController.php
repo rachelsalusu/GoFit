@@ -21,13 +21,18 @@ class WalletController extends Controller
 
     public function store(Request $request)
     {
+        $merchant = auth()->user()->merchant;
         $request->validate([
-            'price' => 'required|numeric|min:1',
+            'price' => ['required','numeric', 'min:100000',
+            function ($attribute, $value, $fail) use ($merchant) {
+                if ($value > $merchant->wallet) {
+                    $fail('Wallet amount is not enough');
+                }
+            }],
             'bank_name' => 'required|string',
             'bank_account_number' => 'required|string',
         ]);
         try {
-            $merchant = auth()->user()->merchant;
             $merchant->wallet -= $request->price;
             $merchant->save();
             TransferWallet::create([

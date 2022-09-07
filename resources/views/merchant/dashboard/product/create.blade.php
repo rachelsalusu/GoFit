@@ -1,14 +1,28 @@
 @extends('layouts.dashboard.main')
 
 @section('content')
-<h1 class="mt-3 mb-5">Create products</h1>
 
 <form action="{{route('merchant.dashboard.product.store')}}" method="POST" enctype="multipart/form-data">
     @csrf
+    <div class="form-group">
+        @error('slug')
+        <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+
+        <label class="font-createtitle" style="margin-top: 100px" for="title">Title</label>
+        <div class="font-createtitle2">Add car’s year and  brand</div>
+        <input type="text" class="form-control border-creatproduct @error('title') is-invalid @enderror" id="title" name="title"
+            placeholder="e.g. 2018 Chevrolet TRAX PREMIERE 1.4" value="{{old('title')}}">
+        @error('title')
+        <div class="invalid-feedback">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>
     <div class="mb-3">
-        <label for="image" class="form-label">Image</label>
+        <label class="font-createtitle" for="image" class="form-label">Image</label>
         <img class="img-preview img-fluid mb-4 col-sm-2">
-        <input class="form-control @error('image') is-invalid @enderror" type="file" id="image" name="image"
+        <input class="form-control border-creatproduct @error('image') is-invalid @enderror" type="file" id="image" name="image"
             onchange="previewImage()">
         @error('image')
         <div class="invalid-feedback">
@@ -16,34 +30,11 @@
         </div>
         @enderror
     </div>
+    
     <div class="form-group">
-        @error('slug')
-        <div class="alert alert-danger">{{ $message }}</div>
-        @enderror
-
-        <label for="title">Title</label>
-        <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" name="title"
-            placeholder="Title" value="{{old('title')}}">
-        @error('title')
-        <div class="invalid-feedback">
-            {{ $message }}
-        </div>
-        @enderror
-    </div>
-    <div class="form-group">      
-        <label for="price">Price </label>
-        <input type="text" class="form-control @error('price') is-invalid @enderror" id="price" name="price"
-            placeholder="Price (example: 55000000)" value="{{old('price')}}">
-        @error('price')
-        <div class="invalid-feedback">
-            {{ $message }}
-        </div>
-        @enderror
-    </div>        
-
-    <div class="form-group">
-        <label for="body">Body</label>
-        <input type="hidden" class="form-control @error('body') is-invalid @enderror" id="body" name="body"
+        <label class="font-createtitle" for="body">Detail Information</label>
+        <div class="font-createtitle2">Add car’s color, fuel, model, type,  machine capacity, guarantee, and another description</div>
+        <input type="hidden" class="form-control border-creatproduct @error('body') is-invalid @enderror" id="body" name="body"
             value="{{old('body')}}">
         <trix-editor input="body"></trix-editor>
         @error('body')
@@ -52,7 +43,21 @@
         </div>
         @enderror
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <div class="form-group">      
+        <label class="font-createtitle" for="price">Price </label>
+        <input type="text" class="form-control border-creatproduct @error('price') is-invalid @enderror" id="price" name="price"
+            placeholder="Price (example: 55000000)" value="{{old('price')}}">
+        @error('price')
+        <div class="invalid-feedback">
+            {{ $message }}
+        </div>
+        @enderror
+    </div>        
+    
+    <div class="d-flex" style="justify-content: center">
+        <button type="submit" class="btn btn-addproduct">Add Product</button>
+    </div>
 </form>
 
 @endsection

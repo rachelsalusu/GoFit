@@ -501,7 +501,6 @@
     color: white;
 }
 /* Product */
-
 .border-product {
     border: 2px solid #B7B2B2;
     border-radius: 20px 20px 20px 20px;
@@ -571,6 +570,38 @@
 .active, .btn-updateproduct:hover {
     background-color: #3b2b5c;
     color: black;
+}
+/* create Product */
+.font-createtitle {
+    margin-bottom: 1px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+
+    color: #202020;
+}
+.font-createtitle2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #202020;
+}
+.border-creatproduct {
+    border-radius: 10px;
+}
+.btn-addproduct {
+    margin-bottom: 30px;
+    width: 500px;
+    border-radius: 10px;
+    background-color: #2B1360;
+    color: white;
+}
+.active, .btn-addproduct:hover {
+    background-color: #3b2b5c;
+    color: white;
 }
 
 /* Transaction */
