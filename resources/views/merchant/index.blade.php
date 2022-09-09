@@ -28,30 +28,43 @@
                     </div>
                 </div>
                 @elseif($data->status_id == 2)
-                
-                <div class="mb-4">
-                    Merchant Status :
-                    <span class="badge badge-success">
-                        {{ $data->status->name }}
-                    </span>
-                </div>
-                    <div class="col-md-6 mb-4" style="width: 10%;">
-                        <img class="rounded-circle z-depth-2 img-fluid" alt="" src="{{ asset('storage/' . $data->image) }}"
+                <div class="row" style="">
+                    <div class="col-6" style="max-width: 500px">
+                        <img class="merchant-status-img " src="{{ asset("image/merchantwait.png") }}" alt="">
+                    </div>
+                    <div class="col-6 ml-5 font-mercstatus">
+                        <div class="row">
+                            <div class="col-4">
+                                <img class="img-merchantprofile img-fluid" alt="" src="{{ asset('storage/' . $data->image) }}"
                         data-holder-rendered="true">
+                            </div>
+                            <div class="col-8">
+                                <div>{{ $data->name }}</div>
+                                <div class="font-merchdesk">{{ $data->deskripsi }}</div>
+                                <div class="font-merclink">Go to <a style="color: #2A1A5E;" href="{{ route('merchant.dashboard.index') }}">Merchant's dashboard</a></div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <strong>Description</strong> <br>
-                        {{ $data->deskripsi }}
-                    </div>                            
-                    <div>
-                        <a href="{{ route('merchant.dashboard.index') }}">Dashboard</a>
-                    </div>
+                </div>
                 @else
-                <div>
-                    Merchant Status :
-                    <span class="badge badge-danger">
-                        {{ $data->status->name }}
-                    </span>
+                <div class="row" style="">
+                    <div class="col-6" style="max-width: 500px">
+                        <img class="merchant-status-img " src="{{ asset("image/merchantwait.png") }}" alt="">
+                    </div>
+                    <div class="col-6 ml-5 font-merchantstatus">
+                        <div>
+                            <h3 class="mb-4">Merchant Status</h3>
+                            <div class="merc-status">
+                                <p style="margin-top: 11px">Status : </p> 
+                                <span class="badge badge-mercstatus3">
+                                    <p class="text-mercstatus">{{ $data->status->name }}</p>
+                                </span>
+                            </div>
+                            <div class="merc-statusdesc">
+                                We’re sorry your merchant is rejected.
+                            </div>    
+                        </div>
+                    </div>
                 </div>
                 @endif
             

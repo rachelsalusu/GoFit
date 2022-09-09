@@ -21,11 +21,22 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         </li>
                         <li>
+                            @if ( auth()->user()->isadmin == 1 )
+                                <a href="{{ route('admin.dashboard.transactions.index') }}" style="text-decoration: none">
+                                    <button type='submit' class='dropdown-item'>Admin</button>
+                                </a>
+                                <form action="/logout" method="post">
+                                    @csrf
+                                    <button type='submit' class='dropdown-item'><i class="bi bi-box-arrow-right"></i>
+                                        Logout</button>
+                                </form>
+                            @else
                             <form action="/logout" method="post">
                                 @csrf
                                 <button type='submit' class='dropdown-item'><i class="bi bi-box-arrow-right"></i>
                                     Logout</button>
                             </form>
+                            @endif
                         </li>
                     </ul>
                 </li>

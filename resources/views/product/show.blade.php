@@ -13,7 +13,7 @@
                 <a href="{{route('product.index',['merchant'=>$product->merchant->name])}}" style="">
                     <img class="logo-merchantshow" src="{{ asset('storage/' . $product->merchant->image) }}" alt="">
                     <p class="text-capitalize font-merchantshow">
-                       <u>{{$product->merchant->name}}</u>
+                       {{$product->merchant->name}}
                     </p>
                 </a>
             </div>
