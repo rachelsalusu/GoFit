@@ -849,3 +849,53 @@
     background-color: #FBE555;
     color: white;
 }
+
+/* Merchant */
+.title-admmerc {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 44px;
+
+    color: #202020;
+
+}
+.btn-approve{
+    width: 130px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: 'poppins';
+    background-color: #FBE555;
+    color: white;
+}
+.admin-mercstatus1 {
+    font-family: 'poppins';
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    background: #FBE555;
+    border-radius: 10px;
+}
+.admin-mercstatus2 {
+    font-family: 'poppins';
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    background: #2A1A5E;
+    border-radius: 10px;
+}
+.admin-mercstatus3 {
+    font-family: 'poppins';
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    background: #F45905;
+    border-radius: 10px;
+}

@@ -8,7 +8,7 @@
 </form>
         @foreach ($admin_tokens as $admintoken)
         <div class="row">
-            <div class="col-7 mt-4">
+            <div class="col-7 mt-4" style="font-family: poppins; font-size: 18px">
                 <option value="{{$admintoken->id}}">
                     {{$admintoken->token}}
                 </option>
