@@ -866,7 +866,23 @@
     border-radius: 10px;
     font-weight: 700;
     font-family: 'poppins';
-    background-color: #FBE555;
+    background-color: #2A1A5E;
+    color: white;
+}
+.btn-approve:hover {
+    background-color: #3b2b5c;
+    color: white;
+}
+.btn-reject{
+    width: 130px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: 'poppins';
+    background-color: #F45905;
+    color: white;
+}
+.btn-reject:hover {
+    background-color: #e9783b;
     color: white;
 }
 .admin-mercstatus1 {
@@ -899,3 +915,12 @@
     background: #F45905;
     border-radius: 10px;
 }
+
+/* Transaction List */
+.box-border {
+    border: 2px solid #B7B2B2;
+    border-radius: 35px;
+    width: 900px;
+    height: 230px;
+}
+

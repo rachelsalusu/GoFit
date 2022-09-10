@@ -86,10 +86,10 @@
     </div>
     <div class="col-4">
         <a style="text-decoration: none" href="{{ route('admin.dashboard.merchants.accepted', $dt->id) }}">
-            <span class="btn btn-approve">Accept</span>
+            <span class="btn btn-approve" style="">Accept</span>
         </a>
         <a href="{{ route('admin.dashboard.merchants.rejected', $dt->id) }}">
-            <span class="btn btn-approve">Reject</span>
+            <span class="btn btn-reject" style="">Reject</span>
         </a>
     </div>
     <div class="col-2" style="font-family: poppins; font-size: 18px">
