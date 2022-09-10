@@ -133,8 +133,8 @@
         .navbar-brand {
             padding-top: .75rem;
             padding-bottom: .75rem;
-            background-color: rgba(0, 0, 0, .25);
-            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+            background-color: rgba(0, 0, 0, );
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, );
         }
 
         .navbar .navbar-toggler {
@@ -173,14 +173,16 @@
 
 <body>
 
-    @include('layouts.dashboard.navbar')
+    @include('layouts.admin.dashboard.navbar')
 
     <div class="container-fluid">
         <div class="row">
+            <div class="col-3">
 
-            @include('layouts.admin.dashboard.sidebar')
+                @include('layouts.admin.dashboard.sidebar')
+            </div>
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main class="col-md-9 ms-sm-auto px-md-4">
                 @yield('content')
             </main>
 

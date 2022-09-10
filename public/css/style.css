@@ -827,3 +827,25 @@
 .box-withdraw {
     border-radius: 10px;
 }
+
+/* Admin Dashboard */
+
+/* Admin Token */
+.btn-admingenerate {
+    width: 200px;
+    border-radius: 10px;
+    font-family: 'poppins';
+    background-color: #2B1360;
+    color: white;
+}
+.active, .btn-admingenerate:hover {
+    background-color: #2B1360;
+    color: white;
+}
+.btn-admindelete{
+    width: 200px;
+    border-radius: 10px;
+    font-family: 'poppins';
+    background-color: #FBE555;
+    color: white;
+}
