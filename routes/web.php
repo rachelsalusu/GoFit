@@ -47,8 +47,8 @@ Route::prefix('/account')->middleware('auth')->name('account.')->group(function 
 });
 Route::prefix('/product')->name('product.')->group(function () {
     Route::get('/', [IndexProductController::class, 'index'])->name('index');
-    Route::get('/order/{product:slug}', [TransactionController::class, 'order'])->name('order');
-    Route::resource('/transaction', TransactionController::class)->except(['show']);
+    Route::get('/order/{product:slug}', [TransactionController::class, 'order'])->name('order')->middleware('auth');
+    Route::resource('/transaction', TransactionController::class)->except(['show'])->middleware('auth');
     Route::get('/{product:slug}', [IndexProductController::class, 'show'])->name('show');
 });
 

@@ -41,7 +41,7 @@
                             <div class="col-8">
                                 <div>{{ $data->name }}</div>
                                 <div class="font-merchdesk">{{ $data->deskripsi }}</div>
-                                <div class="font-merclink">Go to <a style="color: #2A1A5E;" href="{{ route('merchant.dashboard.index') }}">Merchant's dashboard</a></div>
+                                <div class="font-merclink">Go to <a style="color: #2A1A5E; font-weight:700" href="{{ route('merchant.dashboard.index') }}">Merchant's dashboard</a></div>
                             </div>
                         </div>
                     </div>

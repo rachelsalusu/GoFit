@@ -1,6 +1,7 @@
 @extends('layouts.product.main')
 
 @section('content')
+@auth
 <div class="flex-container mt-5">
     <div class="flex-left" style="max-width: 500px">
         <div class="card card-size" style="width: 450px">
@@ -57,4 +58,5 @@
         </form>
     </div>
 </div>
+@endauth
 @endsection

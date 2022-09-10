@@ -21,13 +21,13 @@
         @elseif ($tr->status_id == 2)
         <div class="col-3 font-orders">
             <span class="badge status-transaction2">
-                <p>{{ $tr->status->name }}</p> 
+                <p class="text-mercstatus">{{ $tr->status->name }}</p> 
             </span> 
         </div>
         @else
         <div class="col-3 font-orders">
             <span class="badge status-transaction3">
-                <p>{{ $tr->status->name }}</p> 
+                <p class="text-mercstatus">{{ $tr->status->name }}</p> 
             </span> 
         </div>
         @endif
