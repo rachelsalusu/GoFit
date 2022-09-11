@@ -339,7 +339,33 @@
     font-size: 18px;
     line-height: 26px;
 }
+/* ACCOUNT PAGE */
+.form-account {
+    border-radius: 15px;
+}
+.font-account {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 16px;
 
+    color: #202020;
+}
+.font-account2 {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+
+    color: #B7B2B2;
+}
+.btn-account {
+    background: #2B1360;
+    color: white;
+    border-radius: 15px;
+}
 /* ORDER PAGE */
 .font-ordertitle {
     font-family: 'Poppins';
@@ -453,7 +479,6 @@
     line-height: 20px;
 
     color: #202020;
-    /* text-align: center; */
     justify-content: center;
     align-items: center;
 }
