@@ -43,6 +43,11 @@ class MerchantController extends Controller
         );
         return redirect()->route('merchant.index')->with('success', 'merchant created successfully');
     }
+    public function show (Merchant $merchant)
+    {
+        $merchant->load(['products']);
+        return view('product.shows.index', compact('merchant'));
+    }
 
     
 }

@@ -37,5 +37,5 @@ class IndexProductController extends Controller
         $product->load(['merchant']);
         return view('product.show', compact('merchant','product'));
     }
-
+    
 }

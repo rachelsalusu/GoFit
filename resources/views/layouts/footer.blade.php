@@ -26,7 +26,7 @@
               <a href="{{ route('merchant.index') }}" class="text-reset fontftr">My Merchant</a>
             </p>
             <p class="mb-1">
-              <a href="#!" class="text-reset fontftr">Orders</a>
+              <a href="{{ route('orders.index') }}" class="text-reset fontftr">Orders</a>
             </p>
           </div>
           <!-- Grid column -->

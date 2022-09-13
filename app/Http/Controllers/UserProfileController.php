@@ -19,10 +19,10 @@ class UserProfileController extends Controller
     {
         $user = User::where('id' ,auth()->id())->first();
         $validatedData = $request->validate([           
-            'name' => 'string',
-            'email' => 'string|email|unique:users',
-            'username' => 'string|alpha_dash|unique:users',
-            'password_confirmation' => 'string|same:password',
+            'name' => 'string|nullable',
+            'email' => 'string|email|:users|nullable',
+            'username' => 'string|alpha_dash|nullable',
+            'password_confirmation' => 'string|same:password|nullable',
         ]);
         if (!empty($request->password)) {
             $user->password = Hash::make($request->password);

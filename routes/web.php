@@ -52,6 +52,9 @@ Route::prefix('/product')->name('product.')->group(function () {
     Route::get('/{product:slug}', [IndexProductController::class, 'show'])->name('show');
 });
 
+Route::prefix('/merchant')->name('merchant.')->group(function () {
+    Route::get('/{merchant:name}', [MerchantController::class, 'show'])->name('show');
+});
 Route::prefix('/merchant')->middleware('auth')->name('merchant.')->group(function () {
     Route::get('/', [MerchantController::class, 'index'])->name('index');
     Route::prefix('/dashboard')->name('dashboard.')->group(function () {

@@ -9,7 +9,7 @@
         <div class="form-floating mb-3">
             <label class="font-account" for="name">Name</label>
             <input type="text" name="name" class="form-control form-account @error('name') is-invalid @enderror"
-                id="name" placeholder="Name" required value="{{ $user->name }}">
+                id="name" placeholder="Name" value="{{ $user->name }}">
             @error('name')
             <div class="invalid-feedback">
                 {{ $message }}
@@ -19,7 +19,7 @@
         <div class="form-floating mb-3">
             <label class="font-account" for="username">Username</label>
             <input type="text" name="username" class="form-control form-account @error('username') is-invalid @enderror"
-                id="username" placeholder="Username" required value="{{ $user->username }}">
+                id="username" placeholder="Username" value="{{ $user->username }}">
             @error('username')
             <div class="invalid-feedback">
                 {{ $message }}
@@ -30,7 +30,7 @@
         <div class="form-floating mb-3">
             <label class="font-account" for="email">Email address</label>
             <input type="email" name="email" class="form-control form-account @error('email') is-invalid @enderror"
-                id="email" placeholder="name@example.com" required value="{{ $user->email }}">
+                id="email" placeholder="name@example.com" value="{{ $user->email }}">
             @error('email')
             <div class="invalid-feedback">
                 {{ $message }}
