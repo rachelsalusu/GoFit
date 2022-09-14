@@ -372,6 +372,29 @@
     font-style: normal;
 }
 
+/* MERCHANT SHOW */
+.font-mercname {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    
+
+    color: #202020;
+    }
+.font-mercdesk {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+
+    color: #202020;
+}
+.hr-show {
+    margin-left: 7px;
+    border-bottom: 1px solid black;
+    width: 1200px;
+}
 /* MERCHANT PAGE */
 
 .merchant-status-img {

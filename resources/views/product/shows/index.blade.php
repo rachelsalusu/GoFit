@@ -2,17 +2,22 @@
 
 @section('content')
 <div class="row">
-    <div class="col-4">
-
+    <div class="col-2">
+        @if ($merchant->image)    
+            <img class="img-merchantprofile img-fluid" alt="" src="{{ asset('storage/' . $merchant->image) }}"data-holder-rendered="true">
+        @else
+            <i class="fa-solid fa-circle-user img-merchantprofile" style="font-size: 90px; text-align: center"></i>
+        @endif
     </div>
-    <div class="col-8">
-        <div>
+    <div class="col-10">
+        <div class="font-mercname">
             {{ $merchant->name }}
         </div>
-        <div>
+        <div class="font-mercdesk">
             {{ $merchant->deskripsi }}
         </div>
     </div>
+    <hr class="hr-show">
 </div>
 
 
