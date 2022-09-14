@@ -8,10 +8,32 @@
             <div>
                 <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->title }}" class="img-fluid img-product">
             </div>
+            @else
+                <img src="{{ asset("image/blank-image.png") }}" class="img-fluid img-product" alt="" >
             @endif
             <div class="btn-merchant">
-                <a href="{{route('product.index',['merchant'=>$product->merchant->name])}}" style="">
+                {{-- <div class="row">
+                    <div class="col-2">
+                        @if ($product->merchant->image)
+                            <img class="logo-merchantshow" src="{{ asset('storage/' . $product->merchant->image) }}" alt="">
+                        @else
+                            <i class="fa-solid fa-circle-user logo-merchantshow" style="font-size: 22px;margin-left: 20px;margin-top:3px"></i>
+                        @endif
+                    </div>
+                    <div class="col-10" style="padding-left: 1px">
+                        <a class="text-dark font-merchantcard " href="{{route('merchant.show',['merchant'=>$product->merchant->name])}}">
+                            <p class="text-capitalize font-merchantshow" >
+                                {{$product->merchant->name}}
+                            </p>
+                        </a>
+                    </div>
+                </div> --}}
+                <a href="{{route('merchant.show',['merchant'=>$product->merchant->name])}}" style="">
+                    @if ($product->merchant->image)
                     <img class="logo-merchantshow" src="{{ asset('storage/' . $product->merchant->image) }}" alt="">
+                    @else
+                    <i class="fa-solid fa-circle-user logo-merchantshow" style="font-size: 45px;margin-top:7px;color:black"></i>
+                    @endif
                     <p class="text-capitalize font-merchantshow">
                        {{$product->merchant->name}}
                     </p>

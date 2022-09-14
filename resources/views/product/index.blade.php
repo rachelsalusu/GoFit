@@ -28,14 +28,28 @@
                         <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->title }}"
                             class="img-fluid card-img-top img-border" style="width: 100%; height: 200px;object-fit:cover;">
                     </div>
+                    @else
+                        <img src="{{ asset("image/blank-image.png") }}" 
+                            class="img-fluid card-img-top img-border" style="width: 100%; height: 200px;object-fit:cover;" alt="" >
                     @endif
                     <h5 class="card-title font-titlecard mt-2">{{$product->title}}</h5>
-                    <img class="logo-merchant" src="{{ asset('storage/' . $product->merchant->image) }}" alt="">
-                    <a class="text-dark font-merchantcard " href="{{route('merchant.show',['merchant'=>$product->merchant->name])}}">
-                        <strong class="text-capitalize card-merchant">
-                            {{$product->merchant->name}}
-                        </strong>
-                    </a>
+                    <div class="row">
+                        <div class="col-2">
+                            @if ($product->merchant->image)
+                                <img class="logo-merchant" src="{{ asset('storage/' . $product->merchant->image) }}" alt="">
+                            @else
+                                <i class="fa-solid fa-circle-user logo-merchant" style="font-size: 22px;margin-left: 20px;margin-top:3px"></i>
+                            @endif
+                        </div>
+                        <div class="col-10" style="padding-left: 1px">
+                            <a class="text-dark font-merchantcard " href="{{route('merchant.show',['merchant'=>$product->merchant->name])}}">
+                                <strong class="text-capitalize card-merchant" >
+                                    {{$product->merchant->name}}
+                                </strong>
+                            </a>
+                        </div>
+                    </div>
+                    
                     <p class="card-text font-pricecard">
                         Rp. {{number_format($product->price)}}
                     </p>

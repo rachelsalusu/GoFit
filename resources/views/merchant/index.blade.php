@@ -35,8 +35,11 @@
                     <div class="col-6 ml-5 font-mercstatus">
                         <div class="row">
                             <div class="col-4">
-                                <img class="img-merchantprofile img-fluid" alt="" src="{{ asset('storage/' . $data->image) }}"
-                        data-holder-rendered="true">
+                                @if ($data->image)    
+                                    <img class="img-merchantprofile img-fluid" alt="" src="{{ asset('storage/' . $data->image) }}"data-holder-rendered="true">
+                                @else
+                                    <i class="fa-solid fa-circle-user img-merchantprofile" style="font-size: 90px; margin-left: 60px"></i>
+                                @endif
                             </div>
                             <div class="col-8">
                                 <div>{{ $data->name }}</div>

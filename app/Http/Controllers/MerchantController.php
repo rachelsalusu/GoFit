@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Product;
 use App\Models\Merchant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -43,10 +44,14 @@ class MerchantController extends Controller
         );
         return redirect()->route('merchant.index')->with('success', 'merchant created successfully');
     }
-    public function show (Merchant $merchant)
+    public function show (Request $request,Merchant $merchant)
     {
-        $merchant->load(['products']);
-        return view('product.shows.index', compact('merchant'));
+        // $merchant->load(['products']);
+        $query = Product::with(['merchant'])->where('merchant_id','=',$merchant->id);
+        $products = $query->latest()
+            ->paginate(6)
+            ->appends($request->query());
+        return view('product.shows.index', compact('merchant','products'));
     }
 
     

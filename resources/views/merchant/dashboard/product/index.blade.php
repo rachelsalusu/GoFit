@@ -22,10 +22,16 @@
 <div class="border-product mb-3">
     <div class="row">
         <div class="col-4">
+            @if ($product->image)
             <img class="product-img" src="{{ asset('storage/' . $product->image) }}" alt="" >
+            @else
+            <img class="product-img" style="object-fit: contain" src="{{ asset("image/blank-image.png") }}" alt="" >
+            @endif
         </div>
         <div class="col-8">
-            <div class="font-titleproduct">{{ $product->title }}</div>
+            <div class="font-titleproduct">
+                <a href="{{route('product.show', $product)}}" style="color: black">{{ $product->title }}</a> 
+            </div>
             <div class="font-priceproduct">Rp. {{ number_format($product->price) }}</div>
             <hr class="hr-product">
             <a href="{{route('merchant.dashboard.product.edit', compact('product'))}}"
