@@ -1,8 +1,8 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="container-img">
-    <img src="{{ asset("image/heropost.png") }}" style="width: 100%;" alt="heropost">
+<div class="container-img" style="padding-left: 0px">
+    <img src="{{ asset("image/heropost.png") }}" style="width: 100%;padding: 0px" alt="heropost">
     <div class="overthere">GUCELL</div>
     <div class="font-hero">GUCC Car Sell</div>
     <form action="" method="get">
@@ -15,7 +15,8 @@
         </div>
     </form>
 </div>
-
+@endsection
+@section('contentbody')
 <h1 class="mb-5 mt-3">Product</h1>
     @if ($products->count())
     <div class="row mt-4">

@@ -25,7 +25,7 @@
             </div>
             <h4 class="font-titleshow">Product Detail</h4>
             <div class="font-bodyshow">{!! $product->body !!}</div>
-            <a href="/product">Back to products</a>
+            {{-- <a href="/product">Back to products</a> --}}
         </div>
     </div>
     <div class="flex-right">

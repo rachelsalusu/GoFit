@@ -12,9 +12,9 @@
 
         <main class="form-registration">
             <h1 class=" mb-1 fw- text-center">Register</h1>
-            <form action="{{route('auth.userRegister')}}" method="post">
+            <form action="{{route('auth.userRegister')}}" method="post" class="d-block">
                 @csrf
-                <div class="form-floating mb-3 form-size">
+                <div class="mb-3 form-size">
                     <label class="font-auth" for="name">Name</label>
                         <input type="text" name="name" class="form-control rounded-top @error('name') is-invalid @enderror"
                             id="name" placeholder="Name" required value="{{ old('name') }}">
@@ -24,7 +24,7 @@
                     </div>
                     @enderror
                 </div>
-                <div class="form-floating mb-3 form-size">
+                <div class="mb-3 form-size">
                     <label class="font-auth" for="username">Username</label>
                     <input type="text" name="username" class="form-control @error('username') is-invalid @enderror"
                         id="username" placeholder="Username" required value="{{ old('username') }}">
@@ -34,7 +34,7 @@
                     </div>
                     @enderror
                 </div>
-                <div class="form-floating mb-3 form-size">
+                <div class="mb-3 form-size">
                     <label class="font-auth" for="email">Email address</label>
                     <input type="email" name="email" class="form-control @error('email') is-invalid @enderror"
                         id="email" placeholder="name@example.com" required value="{{ old('email') }}">
@@ -44,7 +44,7 @@
                     </div>
                     @enderror
                 </div>
-                <div class="form-floating mb-3 form-size">
+                <div class="mb-3 form-size">
                     <label class="font-auth" for="password">Password</label>
                     <input type="password" name="password" class="form-control @error('password') is-invalid @enderror"
                         id="password" placeholder="Password" required>
@@ -54,7 +54,7 @@
                     </div>
                     @enderror
                 </div>
-                <div class="form-floating mb-3 form-size">
+                <div class="mb-3 form-size">
                     <label class="font-auth" for="password">Password Confirmation</label>
                     <input type="password" name="password_confirmation"
                         class="form-control @error('password_confirmation') is-invalid @enderror" id="password"
@@ -65,7 +65,7 @@
                     </div>
                     @enderror
                 </div>
-                <div class="form-floating mb-3 form-size">
+                <div class="mb-3 form-size">
                     <label class="font-auth" for="token">Token (Optional)</label>
                     <input type="text" name="token" class="form-control @error('token') is-invalid @enderror"
                         id="token" placeholder="token" value="{{ old('token') }}">

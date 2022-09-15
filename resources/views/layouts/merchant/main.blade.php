@@ -19,15 +19,13 @@
 
 <body>
     {{-- NAVBAR --}}
-    @include('layouts.navbar')
+    @include('layouts.merchant.navbar')
 
-    <div class="">
+    <div class="container pt-3">
         {{-- CONTENT --}}
         @yield('content')
     </div>
-    <div class="container pt-3">
-        @yield('contentbody')
-    </div>
+
     {{-- FOOTER --}}
     @include('layouts.footer')
 

@@ -42,28 +42,11 @@
                 </li>
                 @else
                 <li class="nav-item">
-                    <a href="/login" class="nav-link {{ Request::is('login') ? 'active' : '' }}"> 
+                    <a href="/login" class="nav-link {{ Request::is('login') ? 'active' : '' }}">
                     <button class="navlogin font-navlogin">Login</button></a>
                 </li>
                 @endauth
             </ul>
-        </div>
-    </div>
-</nav>
-<nav class="navbar navbar-expand-lg navbar-light bg-white" style="padding: 0px;height: 50px">
-    <div class="">
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div id="navbarbtn">
-                <a class=""  href="{{ route('account.index') }}">
-                    <button class="btnnavbar {{(request()->segment(1) == 'account') ? 'active' : ''}}">Account</button>
-                </a>
-                <a class=""  href="{{ route('merchant.index') }}">
-                    <button class="btnnavbar {{(request()->segment(1) == 'merchant') ? 'active' : ''}}">My Merchant</button>
-                </a>
-                <a class=""  href="{{ route('orders.index') }}">
-                    <button class="btnnavbar {{(request()->segment(1) == 'orders') ? 'active' : ''}}">Orders</button>
-                </a>
-            </div>
         </div>
     </div>
 </nav>
