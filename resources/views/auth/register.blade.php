@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="d-flex justify-content-center mt-0">
-    <img src="{{ asset("image/logo.png") }}" style='width: 10%;' alt="logo">
+    <img src="{{ asset("image/logoo.png") }}" style='width: 10%;' alt="logo">
 </div>
 <div class="d-flex justify-content-center">
     <div>
-        <img src="{{ asset("image/register.png") }}" style="object-fit: contain;width: 100%; height: 100%; " alt="">
+        <img src="{{ asset("image/registerr.png") }}" style="object-fit: contain;width: 70%; height: 100%; " alt="">
     </div> 
     <div class="col-lg-5">
 
@@ -78,7 +78,7 @@
                 <button class="w-100 btn btn-lg btn-submit font-submit mt-3" type="submit">Register</button>
             </form>
             <div class="d-flex justify-content-center font-auth mt-2 mb-5">
-                <small>Already registered? <a href="/login" style="color: #FB9224">Login here</a></small>
+                <small>Already registered? <a href="/login" style="color: #124472">Login here</a></small>
             </div>
         </main>
     </div>

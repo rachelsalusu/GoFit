@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
 @section('content')
-<div class="row justify-content-center">
-    <div class="col-6">
-        <img class="merchant-status-img " src="{{ asset("image/merchantregist.png") }}" alt="">
+<div class="row">
+    <div class="col-6" style="padding-bottom: 200px">
+        <img class="merchant-status-img " src="{{ asset("image/registermerchant.png") }}" alt="">
     </div>
     <div class="col-6">
-            <h1 class="mb-3 font-titleregis">Register</h1>
+            <h1 class="mb-3 font-titleregis" style="padding-top: 100px">Register</h1>
             <form action="{{route('merchant.merchantRegister')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">

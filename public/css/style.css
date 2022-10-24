@@ -13,6 +13,10 @@
     margin-bottom: 20px;
 }
 
+.container {
+    margin-top: 50px;
+}
+
 /* footer */
 .footer-logo {
     width: 23px; 
@@ -42,7 +46,7 @@
 /* auth */
 .btn-submit {
 
-    background: #FBE555;
+    background: #124472;
     border-radius: 15px;
     
     
@@ -78,26 +82,31 @@
 
 /* navbar */
 .navbar{
-    height: 80px;
-    background-color: #FBE555;
+    height: 100px;
+    padding-top: 40px;
+    background-image: linear-gradient(to top, #ffffff00, #C9EBFF);
+}
+
+.navbarposition{
+    padding-bottom: 100px;
 }
 
 .navlogin {
+    margin-bottom: 80px;
     width: 200px;
     height: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: #E5D045;
+    background-color: white;
     border-color: white;
 }
 .font-navlogin {
     font-family: "Poppins";
     font-style: normal;
-    font-weight: 500;
+    font-weight: 900;
     font-size: 14px;
     line-height: 22px;
-
-    color: white;
+    color: #104493;
 }
 
 /* Hero Post */
@@ -119,13 +128,13 @@
 }
 .font-hero {
     position: absolute;
-    top: 36%;
+    top: 40%;
     width: 100%;
     text-align: center;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 800;
-    font-size: 31px;
+    font-size: 20px;
     line-height: 69px;
 
     color: #FAF6F6;
@@ -153,20 +162,20 @@
 /* Style the buttons */
 .btnnavbar {
     border: transparent;
-    width: 420px;
-    padding: 10px;
+    width: 449.5px;
+    padding: 15px;
     float: left;
     background-color: white;
     color: black;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     font-family: "poppins";
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 500;
   }
   
   /* Style the active class, and buttons on mouse-over */
   .active, .btnnavbar:hover {
-    background-color: #2B1360;
+    background-color: #124472;
     color: white;
   }
 
@@ -230,7 +239,7 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
-    color: #2B1360;
+    color: #124472;
 }
 
 .font-excerptcard {
@@ -329,12 +338,14 @@
     color: #202020;
 }
 .btn-order {
-    width: 300px;
+    width: 350px;
+    height: 40px;
     border-radius: 10px;
     border: transparent;
     font-weight: bold;
-    background-color: #2B1360;
+    background-color: #124472;
     color: #FDFDFD;
+    border-radius: 100px;
 }
 .font-order {
     font-family: 'Poppins';
@@ -367,7 +378,7 @@
 }
 .btn-account {
     font-family: 'poppins';
-    background: #2B1360;
+    background: #124472;
     color: white;
     border-radius: 15px;
 }
@@ -403,7 +414,7 @@
 /* MERCHANT PAGE */
 
 .merchant-status-img {
-    object-fit: contain;
+    object-fit: fill;
     width: 600px;
 }
 .font-merchantstatus {
@@ -418,10 +429,14 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+
+
 }
+
+
 .merc-regis {
-    font-weight: bold;
-    color: #FF9305;
+    font-weight: 700;
+    color: #124472;
 }
 .font-titleregis {
     font-family: 'Poppins';
@@ -437,8 +452,9 @@
     font-family: 'Poppins';
 }
 .active, .btn-order:hover {
-    background-color: #2B1360;
+    background-color: #124472;
     color: white;
+    
 }
 .merc-status {
     display: flex;
@@ -467,7 +483,7 @@
     width: 176.38px;
     height: 35.14px;
     text-align: center;
-    background: #FBE555;
+    background: #124472;
     color: white;
     border-radius: 15px;
 }
@@ -591,7 +607,7 @@
 }
 /* Style the active class, and buttons on mouse-over */
 .active, .btnsidebar-merchant:hover {
-    background-color: #2B1360;
+    background-color: #124472;
     color: white;
     }
 
@@ -615,11 +631,11 @@
 .btn-updateprofile {
     width: 500px;
     color: white;
-    background: #2B1360;
+    background: #124472;
     border-radius: 15px;
 }
 .active, .btn-updateprofile:hover {
-    background-color: #341578;
+    background-color: #124472;
     color: white;
 }
 /* Product */
@@ -673,14 +689,14 @@
     margin-top: 20px;
     width: 210px;
     color: white;
-    background: #2B1360;
+    background: #124472;
     border-radius: 15px;
 }
 .btn-updateproduct {
     width: 240px;
     margin-right: 15px;
     color: white;
-    background: #2B1360;
+    background: #124472;
     border-radius: 15px;
 }
 .btn-deleteproduct {
@@ -718,11 +734,11 @@
     margin-bottom: 30px;
     width: 500px;
     border-radius: 10px;
-    background-color: #2B1360;
+    background-color: #124472;
     color: white;
 }
 .active, .btn-addproduct:hover {
-    background-color: #3b2b5c;
+    background-color: #124472;
     color: white;
 }
 
@@ -831,11 +847,11 @@
     height: 30px;
     text-align: center;
     color: white;
-    background: #2B1360;
+    background: #124472;
     border-radius: 15px;
 }
 .active, .btn-walletwithdraw:hover {
-    background-color: #3b2b5c;
+    background-color: #124472;
     color: white;
 }
 .font-walletwithdraw {
@@ -888,11 +904,11 @@
     width: 200px;
     border-radius: 10px;
     font-family: 'poppins';
-    background-color: #2B1360;
+    background-color: #124472;
     color: white;
 }
 .active, .btn-admingenerate:hover {
-    background-color: #2B1360;
+    background-color: #124472;
     color: white;
 }
 .btn-admindelete{

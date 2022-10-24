@@ -8,8 +8,8 @@
         <div class="row mt-3">
           <!-- Grid column -->
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <img class="mt-4"src="{{ asset("image/logo-hitam.png") }}" 
-            alt="" style="width: 210px;height: 120px;">
+            <img class="mt-4"src="{{ asset("image/logoo hitam.png") }}" 
+            alt="" style="width: 181px;height: 52px;">
           </div>
           <!-- Grid column -->
   

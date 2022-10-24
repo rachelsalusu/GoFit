@@ -2,22 +2,23 @@
 
 @section('content')
 <div class="container-img" style="padding-left: 0px">
-    <img src="{{ asset("image/heropost.png") }}" style="width: 100%;padding: 0px" alt="heropost">
-    <div class="overthere">GUCELL</div>
-    <div class="font-hero">GUCC Car Sell</div>
+    <img src="{{ asset("image/sport.jpg") }}" style="width: 100%;padding: 0px" alt="sport">
+    <div class="overthere">
+        <img src="{{ asset("image/logoo.png") }}" style='width: 25%;' alt="logo">
+    </div>
+    <div class="font-hero">Memulai di mana saja dengan kami</div>
     <form action="" method="get">
         <div class="input-group mb-3 searchbar" >
-            <input type="search"  class="form-control rounded" placeholder="Search for cars, and merchant." name="search" value="{{ request('search') }}" aria-label="Search" aria-describedby="search-addon" />
+            <input type="search"  class="form-control rounded" placeholder="Search for trainers" name="search" value="{{ request('search') }}" aria-label="Search" aria-describedby="search-addon" />
             <button class="searchicon" style="background-color: transparent;border: none;">
                     <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            
         </div>
     </form>
 </div>
 @endsection
 @section('contentbody')
-<h1 class="mb-5 mt-3">Product</h1>
+<h1 class="mb-5 mt-3">Trainer</h1>
     @if ($products->count())
     <div class="row mt-4">
         @foreach ($products as $product)
@@ -63,7 +64,7 @@
         @endforeach
     </div>
     @else
-    <p class="text-center fs-4">No products found.</p>
+    <p class="text-center fs-4">No trainers found.</p>
     @endif
 
     <div class="mt-3">

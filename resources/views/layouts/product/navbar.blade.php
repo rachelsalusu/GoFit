@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container d-flex">
         <a class="navbar-brand mt-4" href="/product">
-            <img src="{{ asset("image/logo-putih.png") }}" style="width: 100px;" alt="">
+            <img src="{{ asset("image/logoo.png") }}" style="width: 100px;" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

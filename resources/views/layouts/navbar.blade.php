@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container d-flex">
-        <a class="navbar-brand mt-4" href="/product">
-            <img src="{{ asset("image/logo-putih.png") }}" style="width: 100px;" alt="">
+        <a class="navbarposition" href="/product">
+            <img src="{{ asset("image/logoo.png") }}" style="width: 150px;" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,7 +14,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link " href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <button class="navlogin font-navlogin">
+                        <button class="navlogin font-navlogin"> 
                             Welcome, <strong>{{ auth()->user()->username }}</strong>
                         </button>
                     </a>
@@ -43,7 +43,7 @@
                 @else
                 <li class="nav-item">
                     <a href="/login" class="nav-link {{ Request::is('login') ? 'active' : '' }}"> 
-                    <button class="navlogin font-navlogin">Login</button></a>
+                    <button class="navlogin font-navlogin"style="padding-top:0px">Login</button></a>
                 </li>
                 @endauth
             </ul>
@@ -58,10 +58,10 @@
                     <button class="btnnavbar {{(request()->segment(1) == 'account') ? 'active' : ''}}">Account</button>
                 </a>
                 <a class=""  href="{{ route('merchant.index') }}">
-                    <button class="btnnavbar {{(request()->segment(1) == 'merchant') ? 'active' : ''}}">My Merchant</button>
+                    <button class="btnnavbar {{(request()->segment(1) == 'merchant') ? 'active' : ''}}">Trainer</button>
                 </a>
                 <a class=""  href="{{ route('orders.index') }}">
-                    <button class="btnnavbar {{(request()->segment(1) == 'orders') ? 'active' : ''}}">Orders</button>
+                    <button class="btnnavbar {{(request()->segment(1) == 'orders') ? 'active' : ''}}">My Course</button>
                 </a>
             </div>
         </div>

@@ -54,7 +54,7 @@
                 @enderror
             </div>
             <input type="hidden" name="product_id" value="{{ $product->id }}">
-            <button type="submit" class="btn btn-order" style="width: 580px;">Check Out</button>
+            <button type="submit" class="btn btn-order" style="width: 580px; height:50px; border-radius: 30px;">Check Out</button>
         </form>
     </div>
 </div>

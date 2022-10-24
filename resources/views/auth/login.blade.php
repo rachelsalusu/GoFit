@@ -1,12 +1,13 @@
 @extends('layouts.auth.main')
 
 @section('content')
-<div class="d-flex justify-content-center mt-0">
-    <img src="{{ asset("image/logo.png") }}" style='width: 10%;' alt="logo">
+<div class="container">
+<div class="d-flex justify-content-center mt-6 pt-6">
+    <img src="{{ asset("image/logoo.png") }}" style='width: 10%;' alt="logo">
 </div>
 <div class="d-flex justify-content-center">
     <div>
-        <img src="{{ asset("image/login.png") }}" style="width: 100%" alt="">
+        <img src="{{ asset("image/loginn.png") }}" style="width:80%" alt="">
     </div> 
     <div class="col-md-5 pt-3">
         
@@ -44,10 +45,11 @@
                 <button class="w-100 btn btn-lg btn-submit font-submit" type="submit">Login</button>
             </form>
             <div class="d-flex justify-content-center font-auth mt-2">
-                <small>Not registered? <a href="/register" style="color: #FB9224">Register Here</a></small>
+                <small>Not registered? <a href="/register" style="color: #124472">Register Here</a></small>
             </div>
         </main>
     </div>
+</div>
 </div>
 
 @endsection

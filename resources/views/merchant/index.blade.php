@@ -4,13 +4,13 @@
 @auth
 
 <div class="container">
-        <div class=" justify-content-left mt-2">
+        <div class=" ">
             @if(auth()->user()->merchant)
             
                 @if($data->status_id == 1)
                 <div class="row" style="">
                     <div class="col-6" style="max-width: 500px">
-                        <img class="merchant-status-img " src="{{ asset("image/merchantwait.png") }}" alt="">
+                        <img class="merchant-status-img " src="{{ asset("image/accepted.png") }}" alt="">
                     </div>
                     <div class="col-6 ml-5 font-merchantstatus">
                         <div>
@@ -30,7 +30,7 @@
                 @elseif($data->status_id == 2)
                 <div class="row" style="">
                     <div class="col-6" style="max-width: 500px">
-                        <img class="merchant-status-img " src="{{ asset("image/merchantwait.png") }}" alt="">
+                        <img class="merchant-status-img " src="{{ asset("image/accepted.png") }}" alt="">
                     </div>
                     <div class="col-6 ml-5 font-mercstatus">
                         <div class="row">
@@ -52,7 +52,7 @@
                 @else
                 <div class="row" style="">
                     <div class="col-6" style="max-width: 500px">
-                        <img class="merchant-status-img " src="{{ asset("image/merchantwait.png") }}" alt="">
+                        <img class="merchant-status-img " src="{{ asset("image/rejected.png") }}" alt="">
                     </div>
                     <div class="col-6 ml-5 font-merchantstatus">
                         <div>
@@ -73,14 +73,14 @@
             
             @else
             <div class="row">
-                <div class="col-6" style="max-width: 500px">
-                    <img class="merchant-status-img " src="{{ asset("image/merchantsorry.png") }}" alt="">
+                <div class="regis-merc" style="max-width: 500px">
+                    <img class="merchant-status-img " src="{{ asset("image/awalmerchant.png") }}" alt="">
                 </div>
                 <div class="col-6 font-merchantstatus" style="">
                     <div>
 
-                        <p>Haven’t register as a merchant? <br></p>
-                        <a class="merc-regis" href="{{ route('merchant.register') }}" >Register Here</a>
+                        <p>Are you a trainer? Train and give a great experience to others<br></p>
+                        <a class="merc-regis" href="{{ route('merchant.register') }}" >Register as Trainer Here</a>
                     </div>
                 </div>
             </div>
