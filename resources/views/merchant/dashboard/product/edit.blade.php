@@ -12,7 +12,7 @@
         @enderror
 
         <label class="font-createtitle" for="title" style="margin-top: 100px">Title</label>
-        <div class="font-createtitle2">Add car’s year and  brand</div>
+        <div class="font-createtitle2">What's your tutoring subjects?</div>
         <input type="text" class="form-control border-creatproduct @error('title') is-invalid @enderror" id="title" name="title"
             placeholder="Title" value="{{ old('title', $product->title) }}">
         @error('title')
@@ -39,7 +39,7 @@
     </div>
     <div class="form-group">
         <label class="font-createtitle" for="body">Detail Information</label>
-        <div class="font-createtitle2">Add car’s color, fuel, model, type,  machine capacity, guarantee, and another description</div>
+        <div class="font-createtitle2">Write your basic info, academic background, and achievements (optional)</div>
         <input type="hidden" class="form-control border-creatproduct @error('title') is-invalid @enderror" id="body" name="body"
             value="{{old('body', $product->body)}}">
         <trix-editor input="body"></trix-editor>
@@ -50,9 +50,9 @@
         @enderror
     </div>
     <div class="form-group">      
-        <label class="font-createtitle" for="price">Price </label>
+        <label class="font-createtitle" for="price">Tutor Costs per Hour</label>
         <input type="text" class="form-control border-creatproduct @error('price') is-invalid @enderror" id="price" name="price"
-            placeholder="Price (example: 55000000)" value="{{old('price')}}">
+            placeholder="Price (example: 80000)" value="{{old('price')}}">
         @error('price')
         <div class="invalid-feedback">
             {{ $message }}

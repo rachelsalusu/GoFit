@@ -10,9 +10,9 @@
         @enderror
 
         <label class="font-createtitle" style="margin-top: 100px" for="title">Title</label>
-        <div class="font-createtitle2">Add car’s year and  brand</div>
+        <div class="font-createtitle2">What's your tutoring subjects?</div>
         <input type="text" class="form-control border-creatproduct @error('title') is-invalid @enderror" id="title" name="title"
-            placeholder="e.g. 2018 Chevrolet TRAX PREMIERE 1.4" value="{{old('title')}}">
+            placeholder="(example: Swimming Teacher)" value="{{old('title')}}">
         @error('title')
         <div class="invalid-feedback">
             {{ $message }}
@@ -30,10 +30,10 @@
         </div>
         @enderror
     </div>
-    
+
     <div class="form-group">
         <label class="font-createtitle" for="body">Detail Information</label>
-        <div class="font-createtitle2">Add car’s color, fuel, model, type,  machine capacity, guarantee, and another description</div>
+        <div class="font-createtitle2">Write your basic info, academic background, and achievements (optional)</div>
         <input type="hidden" class="form-control border-creatproduct @error('body') is-invalid @enderror" id="body" name="body"
             value="{{old('body')}}">
         <trix-editor input="body"></trix-editor>
@@ -45,9 +45,9 @@
     </div>
 
     <div class="form-group">      
-        <label class="font-createtitle" for="price">Price </label>
+        <label class="font-createtitle" for="price">Tutor Costs per Hour</label>
         <input type="text" class="form-control border-creatproduct @error('price') is-invalid @enderror" id="price" name="price"
-            placeholder="Price (example: 55000000)" value="{{old('price')}}">
+            placeholder="Price (example: 80000)" value="{{old('price')}}">
         @error('price')
         <div class="invalid-feedback">
             {{ $message }}

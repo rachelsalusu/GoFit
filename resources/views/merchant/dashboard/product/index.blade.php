@@ -11,12 +11,12 @@
 <div class="d-flex justify-content-end mb-3">
     <a href="{{route('merchant.dashboard.product.create')}}" class="btn btn-createproduct">Add Product</a>
 </div>
-<form action="" method="get">
+<!-- <form action="" method="get">
     <div class="input-group mb-3">
         <input type="text" class="form-control" placeholder="Search" name="search" value="{{ request('search') }}">
         <button class="btn btn-primary" type="submit">Search</button>
     </div>
-</form>
+</form> -->
 
 @foreach ($products as $product)
 <div class="border-product mb-3">

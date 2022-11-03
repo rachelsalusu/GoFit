@@ -38,7 +38,7 @@
                 @endif
                 <td>
                     <a href="{{ route('admin.dashboard.merchants.accepted', $dt->id) }}">
-                        <span class="badge badge-success">Accept</span>
+                        <span class="badge badge-g" style="color: green">Accept</span>
                     </a>
                     <a href="{{ route('admin.dashboard.merchants.rejected', $dt->id) }}">
                         <span class="badge badge-danger">Reject</span>

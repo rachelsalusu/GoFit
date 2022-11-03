@@ -33,7 +33,7 @@
                 @enderror
             </div>
             <div class="form-floating mb-3">
-                <label for="deskripsi">deskripsi</label>
+                <label for="deskripsi">Description</label>
                     <textarea name="deskripsi" class="border-deskinput form-control @error('deskripsi') is-invalid @enderror" 
                     id="deskripsi" cols="23" rows="4" placeholder="deskripsi" required >{{ $data->deskripsi }}</textarea>
                 @error('deskripsi')

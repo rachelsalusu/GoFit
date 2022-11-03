@@ -99,6 +99,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: white;
     border-color: white;
+    /* position: absolute; */
 }
 .font-navlogin {
     font-family: "Poppins";
@@ -436,7 +437,7 @@
 
 .merc-regis {
     font-weight: 700;
-    color: #124472;
+    color: #ff0000;
 }
 .font-titleregis {
     font-family: 'Poppins';
@@ -483,7 +484,7 @@
     width: 176.38px;
     height: 35.14px;
     text-align: center;
-    background: #124472;
+    background: #da9732;
     color: white;
     border-radius: 15px;
 }
@@ -492,7 +493,7 @@
     width: 176.38px;
     height: 35.14px;
     text-align: center;
-    background: #2A1A5E;
+    background: #156c80;
     color: white;
     border-radius: 15px;
 }
@@ -501,7 +502,7 @@
     width: 176.38px;
     height: 35.14px;
     text-align: center;
-    background: #F45905;
+    background: #ac2c2c;
     color: white;
     border-radius: 15px;
 }
@@ -567,7 +568,7 @@
     width: 130px;
     height: 85%;
     justify-content: center;
-    background: #FBE555;
+    background: #da9732;
     color: white;
     border-radius: 15px;
 }
@@ -575,7 +576,7 @@
     width: 130px;
     height: 85%;
     justify-content: center;
-    background: #2A1A5E;
+    background: #156c80;
     color: white;
     border-radius: 15px;
 }
@@ -583,7 +584,7 @@
     width: 130px;
     height: 85%;
     justify-content: center;
-    background: #F45905;
+    background: #ac2c2c;
     color: white;
     border-radius: 15px;
 }
@@ -596,7 +597,7 @@
     width: 280px;
     padding: 10px;
     float: left;
-    background-color: white;
+    background-color: rgb(218, 217, 217);
     color: black;
     cursor: pointer;
     font-family: "poppins";
@@ -701,14 +702,20 @@
 }
 .btn-deleteproduct {
     width: 240px;
-    color: white;
-    background: #FBE555;
+    color: rgb(255, 255, 255);
+    background: #ac2c2c;
     border-radius: 15px;
 }
 .active, .btn-updateproduct:hover {
-    background-color: #3b2b5c;
-    color: black;
+    background-color: #002c55;
+    color: rgb(255, 255, 255);
 }
+
+.active, .btn-deleteproduct:hover {
+    background-color: #8f2a2a;
+    color: rgb(255, 255, 255);
+}
+
 /* create Product */
 .font-createtitle {
     margin-bottom: 1px;
@@ -793,7 +800,7 @@
     justify-content: center;
     width: 100px;
     height: 30px;
-    background: #FBE555;
+    background: #da9732;
     border-radius: 15px;
 }
 .status-transaction2 {
@@ -809,93 +816,10 @@
     justify-content: center;
     width: 100px;
     height: 30px;
-    background: #F45905;
+    background: #ac2c2c;
     border-radius: 15px;
 }
-/* Wallet */
 
-.wallet-box {
-    width: 600px;
-    height: 100px;
-    margin-left: 25px;
-    border: 1px solid #B7B2B2;
-    border-radius: 20px;
-}
-.font-walletbalance {
-    margin-top: 20px;
-    margin-left: 10px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-
-    color: #202020;
-}
-.font-walletmywallet {
-    margin-top: 20px;
-    margin-right: 30px;
-    text-align: right;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-
-    color: #202020;
-}
-.btn-walletwithdraw {
-    width: 140px;
-    height: 30px;
-    text-align: center;
-    color: white;
-    background: #124472;
-    border-radius: 15px;
-}
-.active, .btn-walletwithdraw:hover {
-    background-color: #124472;
-    color: white;
-}
-.font-walletwithdraw {
-    font-family: 'poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
-
-    color: #FDFDFD;
-}
-.font-walletprice {
-    margin-top: 1px;
-    margin-left: 10px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 21px;
-    
-    color: #202020;
-}
-/* wallet withdraw */
-
-.font-withdrawtitle {
-    margin-top: 20px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-
-    color: #202020;
-}
-.font-withdrawtitle2 {
-    margin-bottom: 1px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 21px;
-
-    color: #202020;
-}
-.box-withdraw {
-    border-radius: 10px;
-}
 
 /* Admin Dashboard */
 
@@ -915,7 +839,7 @@
     width: 200px;
     border-radius: 10px;
     font-family: 'poppins';
-    background-color: #FBE555;
+    background-color: #ac2c2c;
     color: white;
 }
 
@@ -935,11 +859,11 @@
     border-radius: 10px;
     font-weight: 700;
     font-family: 'poppins';
-    background-color: #2A1A5E;
+    background-color: #1186a0;
     color: white;
 }
 .btn-approve:hover {
-    background-color: #3b2b5c;
+    background-color: #11758c;
     color: white;
 }
 .btn-reject{
@@ -947,11 +871,11 @@
     border-radius: 10px;
     font-weight: 700;
     font-family: 'poppins';
-    background-color: #F45905;
+    background-color: #ac2c2c;
     color: white;
 }
 .btn-reject:hover {
-    background-color: #e9783b;
+    background-color: #8f2a2a;
     color: white;
 }
 .admin-mercstatus1 {
@@ -961,7 +885,7 @@
     text-align: center;
     width: 150px;
     height: 40px;
-    background: #FBE555;
+    background: #da9732;
     border-radius: 10px;
 }
 .admin-mercstatus2 {
@@ -971,7 +895,7 @@
     text-align: center;
     width: 150px;
     height: 40px;
-    background: #2A1A5E;
+    background: #156c80;
     border-radius: 10px;
 }
 .admin-mercstatus3 {
@@ -981,7 +905,7 @@
     text-align: center;
     width: 150px;
     height: 40px;
-    background: #F45905;
+    background: #ac2c2c;
     border-radius: 10px;
 }
 

@@ -19,7 +19,7 @@
                     <i class="fa-solid fa-circle-user logo-merchantshow" style="font-size: 45px;margin-top:7px;color:black"></i>
                     @endif
                     <p class="text-capitalize font-merchantshow">
-                       {{$product->merchant->name}}
+                       {{$product->merchant->name}}'s course
                     </p>
                 </a>
             </div>
@@ -32,9 +32,11 @@
  
         <h1 class="font-titleshow">{{$product->title}}</h1>
         <div class="font-priceshow">
-            Rp. {{number_format($product->price)}}
+            Rp. {{number_format($product->price)}}/jam
         </div>
-        
+        <div class="font-bodyshow" style="padding-bottom: 10px">
+            terverifikasi {{-- //ini bikin otomatis di tiap org --}}
+        </div>
         <a class="font-order" href="{{route('product.order',$product)}}">
             <button class="btn-order">Order Now</button>
         </a>

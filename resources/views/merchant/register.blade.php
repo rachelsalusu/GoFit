@@ -31,7 +31,7 @@
                     @enderror
                 </div>
                 <div class="form-floating mb-3 font-sub-titleregis">
-                    <label for="deskripsi">deskripsi</label>
+                    <label for="deskripsi">Description</label>
                     <input type="text" name="deskripsi" class="form-control @error('deskripsi') is-invalid @enderror"
                         id="deskripsi" placeholder="deskripsi" required value="{{ old('deskripsi') }}">
                     @error('deskripsi')
