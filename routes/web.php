@@ -7,7 +7,6 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\DashboardTransactionController;
-use App\Http\Controllers\WalletController;
 use App\Http\Controllers\IndexProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserProfileController;
@@ -58,7 +57,6 @@ Route::prefix('/merchant')->middleware('auth')->name('merchant.')->group(functio
     Route::prefix('/dashboard')->name('dashboard.')->group(function () {
         Route::get('/', [ProductController::class, 'index'])->name('index');
         Route::resource('/product', ProductController::class)->except(['show']);
-        Route::resource('/wallet', WalletController::class)->except(['show']);
         Route::get('/transaction', [DashboardTransactionController::class, 'index'])->name('transaction');
         // Route::resource('/profile', ProfileController::class)->except(['show']);
         Route::get('/profile', [ProfileController::class, 'index'])->name('profile');

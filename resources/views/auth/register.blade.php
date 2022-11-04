@@ -11,7 +11,7 @@
     <div class="col-lg-5">
 
         <main class="form-registration">
-            <h1 class=" mb-1 fw- text-center">Register</h1>
+            <h2 class=" mb-1 fw- text-center">Register</h2>
             <form action="{{route('auth.userRegister')}}" method="post" class="d-block">
                 @csrf
                 <div class="mb-3 form-size">

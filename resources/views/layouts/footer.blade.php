@@ -23,10 +23,10 @@
               <a href="{{ route('account.index') }}" class="text-reset fontftr">Account</a>
             </p>
             <p class="mb-1">
-              <a href="{{ route('merchant.index') }}" class="text-reset fontftr">My Merchant</a>
+              <a href="{{ route('merchant.index') }}" class="text-reset fontftr">Trainer</a>
             </p>
             <p class="mb-1">
-              <a href="{{ route('orders.index') }}" class="text-reset fontftr">Orders</a>
+              <a href="{{ route('orders.index') }}" class="text-reset fontftr">My Course</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -38,7 +38,7 @@
               Our Office
             </h6>
             <p class="fontftr">
-                Ruang D431, Gedung D, Jl. Margonda Raya 100, Depok Kota Depok 16424 Jawa Barat
+              Ground Floor, 9440 Santa Monica Boulevard California, Beverly Hills, Los Angeles
             </p>
           </div>
           <!-- Grid column -->
