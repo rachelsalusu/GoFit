@@ -1,2 +1,2 @@
 # GoFit
-Web-based Programming Task
+GoFit is a group project of Web-based Programming subject, which created an online sport course website using javacript and laravel framework. This website made with purpose to ease users whose looking for sport courses withput having to come to courses place just to register themselves. This website provides various services as various sports with various coaches, course price, available time of the coaches, and many other features. 
